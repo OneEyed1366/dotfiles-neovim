@@ -18,6 +18,9 @@ autocmd Filetype yaml setlocal ts=4 sw=4 sts=0 expandtab
 
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype scss setlocal ts=2 sw=2 expandtab
+autocmd Filetype less setlocal ts=2 sw=2 expandtab
+autocmd Filetype stylus setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype javascriptreact setlocal ts=2 sw=2 sts=0 expandtab
