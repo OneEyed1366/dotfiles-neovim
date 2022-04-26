@@ -10,17 +10,20 @@ require("packer").use {
           -- Enable completion triggered by <c-x><c-o>
             vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-            vim.api.nvim_buf_set_keymap(bufnr, 'n', '<CR>', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-            vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-            vim.api.nvim_buf_set_keymap(bufnr, 'n', '`r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-            vim.api.nvim_buf_set_keymap(bufnr, 'n', '`a', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-            vim.api.nvim_buf_set_keymap(bufnr, 'n', '`s', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+            -- map(bufnr, 'n', '<CR>', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+            -- map(bufnr, 'n', '`r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+            -- map(bufnr, 'n', '`a', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+            -- map(bufnr, 'n', '`s', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
         end
         -- Mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-        map("n", "<CR>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+        map("n", "K", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+        map("n", "<CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
         map("n", "`q", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
         map("n", "`w", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+        map('n', '`r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+        map('n', '`a', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+        map('n', '`s', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 
         for _, lsp in pairs(servers) do
           require("lspconfig")[lsp].setup {
