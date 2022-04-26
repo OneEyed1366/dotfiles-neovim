@@ -11,11 +11,6 @@ map("", "<right>", ":echoe `Use l`<CR>", default_opts)
 map("n", "<Tab>", ":BufferLineCycleNext<CR>", default_opts)
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", default_opts)
 ----------------------------------------------------------
--- Conqueror of Competetion keys
-----------------------------------------------------------
-map("n", "K", [[<cmd>call CocAction("doHover")<cr>]], default_opts)
-map("n", "<CR>", [[<CMD>CocAction<CR>]], default_opts)
-----------------------------------------------------------
 -- IntelliJ-like keys
 ----------------------------------------------------------
 map("n", "`<Tab>", [[<CMD>Telescope buffers<CR>]], default_opts)
