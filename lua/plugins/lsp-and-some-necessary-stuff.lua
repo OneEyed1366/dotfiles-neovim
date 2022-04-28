@@ -17,7 +17,7 @@ require("packer").use {
         end
         -- Mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-        map("n", "", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+        map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
         map("n", "<CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
         map("n", "`q", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
         map("n", "`w", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)

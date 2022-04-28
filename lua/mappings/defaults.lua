@@ -10,6 +10,12 @@ map("", "<right>", ":echoe `Use l`<CR>", default_opts)
 -- Переключение вкладок с помощью TAB или shift-tab (akinsho/bufferline.nvim)
 map("n", "<Tab>", ":BufferLineCycleNext<CR>", default_opts)
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", default_opts)
+-- Basic mappings for everyday stuff
+map("n", "df", [[<CMD>bw<CR>]], default_opts)
+map("n", "ff", [[<CMD>bw!<CR>]], default_opts)
+map("n", "we", [[<CMD>w<CR>]], default_opts)
+map("n", "qw", [[<CMD>wq<CR>]], default_opts)
+map("n", "qq", [[<CMD>q!<CR>]], default_opts)
 ----------------------------------------------------------
 -- IntelliJ-like keys
 ----------------------------------------------------------
@@ -17,3 +23,4 @@ map("n", "`<Tab>", [[<CMD>Telescope buffers<CR>]], default_opts)
 map("n", "``", [[<CMD>lua require"lir.float".toggle()<CR>]], default_opts)
 map("n", "`1", [[<CMD>Telescope fd<CR>]], default_opts)
 map("n", "`2", [[<CMD>Telescope live_grep<CR>]], default_opts)
+
