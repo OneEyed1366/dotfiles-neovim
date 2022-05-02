@@ -22,7 +22,7 @@ require("packer").use {
         map("n", "`q", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
         map("n", "`w", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
         map('n', '`r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-        map('n', '`a', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+        map('n', '`a', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
         map('n', '`s', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 
         for _, lsp in pairs(servers) do
@@ -55,6 +55,9 @@ require("packer").use {
         --         nmap `r <Plug>(coc-rename)
         --         ]]
         --     end},
+        {"akinsho/flutter-tools.nvim", requires = {{"nvim-lua/plenary.nvim"}}, config = function ()
+            require("flutter-tools").setup{}
+        end},
         {"williamboman/nvim-lsp-installer",
             config = function()
                 require("nvim-lsp-installer").on_server_ready(function(server)
