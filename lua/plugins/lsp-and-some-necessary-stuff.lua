@@ -4,17 +4,19 @@ require("packer").use {
         local map = vim.api.nvim_set_keymap
         local opts = {noremap = true, silent = true}
         local servers = { "pyright", "tsserver" }
-        local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-        -- after the language server attaches to the current buffer
-        local on_attach = function(client, bufnr)
-          -- Enable completion triggered by <c-x><c-o>
-            vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-            -- map(bufnr, 'n', '<CR>', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-            -- map(bufnr, 'n', '`r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-            -- map(bufnr, 'n', '`a', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-            -- map(bufnr, 'n', '`s', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-        end
+        vim.o.completeopt = "menu,menuone,noselect"
+        -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+        -- after the language server attaches to the current buffer
+        -- local on_attach = function(client, bufnr)
+        --   -- Enable completion triggered by <c-x><c-o>
+        --     vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+        --
+        --     -- map(bufnr, 'n', '<CR>', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+        --     -- map(bufnr, 'n', '`r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+        --     -- map(bufnr, 'n', '`a', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+        --     -- map(bufnr, 'n', '`s', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+        -- end
         -- Mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below functions
         map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
@@ -22,39 +24,23 @@ require("packer").use {
         map("n", "`q", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
         map("n", "`w", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
         map('n', '`r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-        map('n', '`a', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-        map('n', '`s', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+        map('n', '`a', '<cmd>lua vim.lsp.buf.definition()<CR>', opts) map('n', '`s', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 
         for _, lsp in pairs(servers) do
-          require("lspconfig")[lsp].setup {
-            on_attach = on_attach,
-            capabilities = capabilities,
+          require("lspconfig")[lsp].setup(require("coq").lsp_ensure_capabilities({
+            -- on_attach = on_attach,
+            -- capabilities = capabilities,
             flags = {
               debounce_text_changes = 150,
             }
-          }
+          }))
         end
     end,
     requires = {
-        -- {"neoclide/coc.nvim", 
-        --    branch ="master",
-        --    run = "yarn install --frozen-lockfile",
-        --    config = function()
-        --    --    map("n", "", [[<CMD>lua require("coc-references")<CR>]], opts)
-        --         vim.cmd[[
-        --         """GoTo errors"""
-        --         nmap <silent> `q <Plug>(coc-diagnostic-prev)
-        --         nmap <silent> `w <Plug>(coc-diagnostic-next)
-        --
-        --         """GoTo Code navigation"""
-        --         nmap <silent> `a <Plug>(coc-definition)
-        --         nmap <silent> `s <Plug>(coc-type-definition)
-        --         nmap <silent> `z <Plug>(coc-implementation)
-        --         nmap <silent> `x <Plug>(coc-references)
-        --         """Rename smth"""
-        --         nmap `r <Plug>(coc-rename)
-        --         ]]
-        --     end},
+        {"ms-jpq/coq_nvim", run = "python3 -m coq deps", requires = {
+            {"ms-jpq/coq.artifacts"},
+            {"ms-jpq/coq.thirdparty"}
+        }, config = function() vim.g.coq_settings = { auto_start = "shut-up" } end},
         {"akinsho/flutter-tools.nvim", requires = {{"nvim-lua/plenary.nvim"}}, config = function ()
             require("flutter-tools").setup{}
         end},
@@ -68,40 +54,6 @@ require("packer").use {
             end,
         },
         {"L3MON4D3/LuaSnip"},
-        {"hrsh7th/nvim-cmp",
-        config = function()
-            local cmp = require("cmp")
-
-            vim.o.completeopt = "menu,menuone,noselect"
-                    
-            cmp.setup({
-                snippet = {
-                  expand = function(args)
-                    require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-                  end,
-                },
-                window = {
-                  completion = cmp.config.window.bordered(),
-                  documentation = cmp.config.window.bordered(),
-                },
-                mapping = cmp.mapping.preset.insert({
-                  -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-                  -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                  -- ['<C-Space>'] = cmp.mapping.complete(),
-                  -- ['<C-e>'] = cmp.mapping.abort(),
-                  ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-                }),
-                sources = cmp.config.sources({
-                  { name = 'nvim_lsp' },
-                  { name = 'luasnip' }, -- For luasnip users.
-                }, {
-                  { name = 'buffer' },
-                })
-              })
-            end
-        },
-        {"hrsh7th/cmp-buffer"},
-        {"hrsh7th/cmp-nvim-lsp"},
         {"nvim-treesitter/nvim-treesitter",
             run = ":TSUpdate",
             config = function()
@@ -140,7 +92,9 @@ require("packer").use {
             end},
         {"norcalli/nvim-colorizer.lua",
             config = function() require("colorizer").setup() end
-        }
+        },
+        {"mitsuhiko/vim-jinja", config = function()
+            vim.cmd[[au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja]]
+        end},
     },
-    
 }
