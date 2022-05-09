@@ -3,8 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-
-    use "powerman/vim-plugin-ruscmd"
+    
     require("plugins/themes")
     require("plugins/transparent")
     require("plugins/lualine")
