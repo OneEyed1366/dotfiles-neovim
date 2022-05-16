@@ -36,6 +36,8 @@ require("packer").use {
                 map("n", "Hd", gs.toggle_deleted)
                 map({"n", "v"}, "Hh", "<CMD>Gitsigns stage_hunk<CR>")
                 map({"n", "v"}, "Hj", "<CMD>Gitsigns undo_stage_hunk<CR>")
+                map("n", "`z", "<CMD>Gitsigns prev_hunk<CR>")
+                map("n", "`x", "<CMD>Gitsigns next_hunk<CR>")
                 -- map("n", "<leader>hS", gs.stage_buffer)
                 -- map("n", "<leader>hu", gs.undo_stage_hunk)
                 -- map("n", "<leader>hR", gs.reset_buffer)
