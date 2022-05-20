@@ -14,8 +14,6 @@ vim.diagnostic.config({
 cmd [[
 colorscheme onedark
 
-autocmd BufWritePre * lua vim.lsp.buf.formatting()
-
 autocmd Filetype json,yaml setlocal ts=4 sw=4 sts=0 expandtab
 
 autocmd Filetype html,css,scss,less,stylus setlocal ts=2 sw=2 expandtab
