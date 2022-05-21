@@ -1,8 +1,6 @@
 require("packer").use {
     "tamago324/lir.nvim",
     requires = {
-        {"nvim-lua/plenary.nvim"},
-        {"kyazdani42/nvim-web-devicons", opt = true},
     },
     config = function()
         local actions = require'lir.actions'
