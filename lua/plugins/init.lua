@@ -15,3 +15,5 @@ return require('packer').startup(function()
     require("plugins/telescope")
     require("plugins/lsp-and-some-necessary-stuff")
 end)
+
+

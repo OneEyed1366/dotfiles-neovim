@@ -14,10 +14,6 @@ require("packer").use {
         -- Basic stuff
         map("n", "`<Space>", "<CMD>Telescope spell_suggest<CR>", opts)
         map("n", "`=", "<CMD>Telescope diagnostics<CR>", opts)
-        -- Lsp stuff
-        map("n", "`a", "<CMD>Telescope lsp_definitions<CR>", opts)
-        map("n", "`s", "<CMD>Telescope lsp_type_definitions<CR>", opts)
-        map("n", "`d", "<CMD>Telescope lsp_references<CR>", opts)
         -- Symbols (functions, variables, etc...)
         map("n", "`3", "<CMD>Telescope lsp_document_symbols<CR>", opts)
         map("n", "`4", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", opts)

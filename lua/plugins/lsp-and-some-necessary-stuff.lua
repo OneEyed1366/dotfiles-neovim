@@ -18,6 +18,9 @@ require("packer").use {
         map("n", "`q", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
         map("n", "`w", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
         map('n', '`r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+        -- Basic LSP stuff
+        map("n", "`a", "<CMD>lua vim.lsp.buf.definition<CR>", opts)
+        map("n", "`s", "<CMD>lua vim.lsp.buf.type_definition<CR>", opts)
 
         for _, lsp in pairs(servers) do
             require("lspconfig")[lsp].setup {
