@@ -9,7 +9,6 @@ require("packer").use {
         local map = vim.api.nvim_set_keymap
         local opts = { noremap = true, silent = true }
         local fb_actions = require "telescope".extensions.file_browser.actions
-        local action_layout = require("telescope.actions.layout")
 
         -- Basic stuff
         map("n", "`<Space>", "<CMD>Telescope spell_suggest<CR>", opts)
@@ -33,7 +32,7 @@ require("packer").use {
                         ["i"] = {
                             -- Telescope file browser
                             ["`n"] = fb_actions.create,
-                            ["`p"] = fb_actions.create_from_prompt,
+                            ["`w"] = fb_actions.create_from_prompt,
                             ["`r"] = fb_actions.rename,
                             ["`v"] = fb_actions.move,
                             ["`c"] = fb_actions.copy,
@@ -44,13 +43,13 @@ require("packer").use {
                         ["n"] = {
                             -- Telescope file browser
                             ["N"] = fb_actions.create,
-                            ["NO"] = fb_actions.create_from_prompt,
+                            ["W"] = fb_actions.create_from_prompt,
                             ["R"] = fb_actions.rename,
                             ["V"] = fb_actions.move,
                             ["C"] = fb_actions.copy,
                             ["D"] = fb_actions.remove,
                             ["O"] = fb_actions.open,
-                            ["I"] = fb_actions.toggle_hidden,ngs
+                            ["I"] = fb_actions.toggle_hidden,
                         },
                     }
                 }
