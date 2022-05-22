@@ -9,7 +9,6 @@ require("packer").use {
         local on_attach = function(client, bufnr)
             -- Enable completion triggered by <c-x><c-o>
             vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
         end
         -- Mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -82,6 +81,9 @@ require("packer").use {
                     autocmd BufWritePre * undojoin | Neoformat
                 augroup END
             ]]
+        end },
+        { "nacro90/numb.nvim", config = function()
+            require("numb").setup()
         end }
     },
 
