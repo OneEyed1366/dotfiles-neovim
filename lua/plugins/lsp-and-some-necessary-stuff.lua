@@ -33,6 +33,7 @@ require("packer").use {
         end
     end,
     requires = {
+        { "haringsrob/nvim_context_vt" },
         { "akinsho/flutter-tools.nvim", requires = { { "nvim-lua/plenary.nvim" } }, config = function()
             require("flutter-tools").setup {}
         end },
@@ -73,7 +74,15 @@ require("packer").use {
             end },
         { "norcalli/nvim-colorizer.lua",
             config = function() require("colorizer").setup() end
-        }
+        },
+        { "sbdchd/neoformat", config = function()
+            vim.cmd[[
+                augroup fmt
+                    autocmd!
+                    autocmd BufWritePre * undojoin | Neoformat
+                augroup END
+            ]]
+        end }
     },
 
 }
