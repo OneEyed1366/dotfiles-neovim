@@ -11,6 +11,7 @@ map("", "<right>", ":echoe `Use l`<CR>", default_opts)
 map("n", "df", [[<CMD>bw<CR>]], default_opts)
 map("n", "ff", [[<CMD>bw!<CR>]], default_opts)
 map("n", "we", [[<CMD>w<CR>]], default_opts)
+map("n", "ww", [[<CMD>wall<CR>]], default_opts)
 map("n", "qw", [[<CMD>wq<CR>]], default_opts)
 map("n", "qq", [[<CMD>q!<CR>]], default_opts)
 ----------------------------------------------------------

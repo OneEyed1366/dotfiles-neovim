@@ -10,7 +10,7 @@ require("packer").use {
         local opts = { noremap = true, silent = true }
         local fb_actions = require "telescope".extensions.file_browser.actions
 
-        -- Basic stuff
+       -- Basic stuff
         map("n", "`<Space>", "<CMD>Telescope spell_suggest<CR>", opts)
         map("n", "`=", "<CMD>Telescope diagnostics<CR>", opts)
         -- Symbols (functions, variables, etc...)
@@ -24,6 +24,8 @@ require("packer").use {
         map("n", "0=", "<CMD>Telescope git_commits<CR>", opts)
         map("n", "9=", "<CMD>Telescope git_stash<CR>", opts)
         map("n", "8=", "<CMD>Telescope git_files<CR>", opts)
+
+        map("n", "`<CR>", "<CMD>Telescope commands<CR>", opts)
 
         require("telescope").setup {
             extensions = {

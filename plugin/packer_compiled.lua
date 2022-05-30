@@ -97,7 +97,7 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["lualine.nvim"] = {
-    config = { "\27LJ\2\n†\5\0\0\5\0\31\0/6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\t\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\0034\4\0\0=\4\b\3=\3\n\0025\3\f\0005\4\v\0=\4\r\0035\4\14\0=\4\15\0035\4\16\0=\4\17\0035\4\18\0=\4\19\0035\4\20\0=\4\21\0035\4\22\0=\4\23\3=\3\24\0025\3\25\0004\4\0\0=\4\r\0034\4\0\0=\4\15\0035\4\26\0=\4\17\0035\4\27\0=\4\19\0034\4\0\0=\4\21\0034\4\0\0=\4\23\3=\3\28\0024\3\0\0=\3\29\0024\3\0\0=\3\30\2B\0\2\1K\0\1\0\15extensions\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\23disabled_filetypes\23section_separators\1\0\2\tleft\bî‚°\nright\bî‚²\25component_separators\1\0\2\tleft\bî‚±\nright\bî‚³\1\0\4\25always_divide_middle\2\17globalstatus\1\ntheme\fonedark\18icons_enabled\2\nsetup\flualine\frequire\0" },
+    config = { "\27LJ\2\n™\5\0\0\b\0 \00026\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\t\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\0034\4\0\0=\4\b\3=\3\n\0025\3\f\0005\4\v\0=\4\r\0035\4\14\0=\4\15\0035\4\16\0006\5\0\0'\a\17\0B\5\2\0029\5\18\5>\5\2\4=\4\19\0035\4\20\0=\4\21\0035\4\22\0=\4\23\3=\3\24\0025\3\25\0004\4\0\0=\4\r\0034\4\0\0=\4\15\0035\4\26\0=\4\19\0035\4\27\0=\4\21\0034\4\0\0=\4\28\0034\4\0\0=\4\23\3=\3\29\0024\3\0\0=\3\30\0024\3\0\0=\3\31\2B\0\2\1K\0\1\0\15extensions\ftabline\22inactive_sections\14lualine_y\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\15statusline\rpomodoro\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\23disabled_filetypes\23section_separators\1\0\2\tleft\bî‚°\nright\bî‚²\25component_separators\1\0\2\tleft\bî‚±\nright\bî‚³\1\0\4\25always_divide_middle\2\17globalstatus\1\ntheme\fonedark\18icons_enabled\2\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/Users/andrejprokopenko/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
@@ -113,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/andrejprokopenko/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/andrejprokopenko/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["numb.nvim"] = {
     config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tnumb\frequire\0" },
@@ -139,7 +144,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
-    config = { "\27LJ\2\nc\0\2\a\0\5\0\b6\2\0\0009\2\1\0029\2\2\2\18\4\1\0'\5\3\0'\6\4\0B\2\4\1K\0\1\0\27v:lua.vim.lsp.omnifunc\romnifunc\24nvim_buf_set_option\bapi\bvim½\6\1\0\14\0#\0L6\0\0\0009\0\1\0009\0\2\0005\1\3\0005\2\4\0006\3\5\0'\5\6\0B\3\2\0029\3\a\0036\5\0\0009\5\b\0059\5\t\0059\5\n\5B\5\1\0A\3\0\0023\4\v\0\18\5\0\0'\a\f\0'\b\r\0'\t\14\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\15\0'\t\16\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\17\0'\t\18\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\19\0'\t\20\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\21\0'\t\22\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\23\0'\t\24\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\25\0'\t\26\0\18\n\1\0B\5\5\0016\5\27\0\18\a\2\0B\5\2\4H\b\v€6\n\5\0'\f\28\0B\n\2\0028\n\t\n9\n\29\n5\f\30\0=\4\31\f=\3 \f5\r!\0=\r\"\fB\n\2\1F\b\3\3R\bóK\0\1\0\nflags\1\0\1\26debounce_text_changes\3–\1\17capabilities\14on_attach\1\0\0\nsetup\14lspconfig\npairs/<CMD>lua vim.lsp.buf.type_definition()<CR>\a`s*<CMD>lua vim.lsp.buf.definition()<CR>\a`a&<cmd>lua vim.lsp.buf.rename()<CR>\a`r,<cmd>lua vim.diagnostic.goto_next()<CR>\a`w,<cmd>lua vim.diagnostic.goto_prev()<CR>\a`q+<cmd>lua vim.lsp.buf.code_action()<CR>\t<CR>%<cmd>lua vim.lsp.buf.hover()<CR>\6K\6n\0\29make_client_capabilities\rprotocol\blsp\24update_capabilities\17cmp_nvim_lsp\frequire\1\3\0\0\fpyright\rtsserver\1\0\2\vsilent\2\fnoremap\2\20nvim_set_keymap\bapi\bvim\0" },
+    config = { "\27LJ\2\nc\0\2\a\0\5\0\b6\2\0\0009\2\1\0029\2\2\2\18\4\1\0'\5\3\0'\6\4\0B\2\4\1K\0\1\0\27v:lua.vim.lsp.omnifunc\romnifunc\24nvim_buf_set_option\bapi\bvim½\6\1\0\14\0#\0L6\0\0\0009\0\1\0009\0\2\0005\1\3\0005\2\4\0006\3\5\0'\5\6\0B\3\2\0029\3\a\0036\5\0\0009\5\b\0059\5\t\0059\5\n\5B\5\1\0A\3\0\0023\4\v\0\18\5\0\0'\a\f\0'\b\r\0'\t\14\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\15\0'\t\16\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\17\0'\t\18\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\19\0'\t\20\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\21\0'\t\22\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\23\0'\t\24\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\25\0'\t\26\0\18\n\1\0B\5\5\0016\5\27\0\18\a\2\0B\5\2\4H\b\v€6\n\5\0'\f\28\0B\n\2\0028\n\t\n9\n\29\n5\f\30\0=\4\31\f=\3 \f5\r!\0=\r\"\fB\n\2\1F\b\3\3R\bóK\0\1\0\nflags\1\0\1\26debounce_text_changes\3–\1\17capabilities\14on_attach\1\0\0\nsetup\14lspconfig\npairs/<CMD>lua vim.lsp.buf.type_definition()<CR>\a`s*<CMD>lua vim.lsp.buf.definition()<CR>\a`a&<cmd>lua vim.lsp.buf.rename()<CR>\a`r,<cmd>lua vim.diagnostic.goto_next()<CR>\a`w,<cmd>lua vim.diagnostic.goto_prev()<CR>\a`q+<cmd>lua vim.lsp.buf.code_action()<CR>\t<CR>%<cmd>lua vim.lsp.buf.hover()<CR>\6K\6n\0\29make_client_capabilities\rprotocol\blsp\24update_capabilities\17cmp_nvim_lsp\frequire\1\3\0\0\fpyright\rtsserver\1\0\2\fnoremap\2\vsilent\2\20nvim_set_keymap\bapi\bvim\0" },
     loaded = true,
     path = "/Users/andrejprokopenko/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
@@ -188,6 +193,12 @@ _G.packer_plugins = {
     path = "/Users/andrejprokopenko/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["pomodoro.nvim"] = {
+    config = { "\27LJ\2\nÙ\2\0\0\b\0\15\0\0296\0\0\0009\0\1\0009\0\2\0005\1\3\0006\2\4\0'\4\5\0B\2\2\0029\2\6\0025\4\a\0B\2\2\1\18\2\0\0'\4\b\0'\5\t\0'\6\n\0\18\a\1\0B\2\5\1\18\2\0\0'\4\b\0'\5\v\0'\6\f\0\18\a\1\0B\2\5\1\18\2\0\0'\4\b\0'\5\r\0'\6\14\0\18\a\1\0B\2\5\1K\0\1\0\28<CMD>PomodoroStatus<CR>\a\\\\\26<CMD>PomodoroStop<CR>\a[]\27<CMD>PomodoroStart<CR>\a]\\\6n\1\0\4\21time_break_short\3\5\14time_work\3\25\25timers_to_long_break\3\4\20time_break_long\3\20\nsetup\rpomodoro\frequire\1\0\2\fnoremap\2\vsilent\2\20nvim_set_keymap\bapi\bvim\0" },
+    loaded = true,
+    path = "/Users/andrejprokopenko/.local/share/nvim/site/pack/packer/start/pomodoro.nvim",
+    url = "https://github.com/wthollingsworth/pomodoro.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
@@ -195,7 +206,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope.nvim"] = {
-    config = { "\27LJ\2\n”\t\0\0\f\0A\0€\0016\0\0\0009\0\1\0009\0\2\0005\1\3\0006\2\4\0'\4\5\0B\2\2\0029\2\6\0029\2\a\0029\2\b\0026\3\4\0'\5\t\0B\3\2\2\18\4\0\0'\6\n\0'\a\v\0'\b\f\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\r\0'\b\14\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\15\0'\b\16\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\17\0'\b\18\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\19\0'\b\20\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\21\0'\b\22\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\23\0'\b\24\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\25\0'\b\26\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\27\0'\b\28\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\29\0'\b\30\0\18\t\1\0B\4\5\0016\4\4\0'\6\5\0B\4\2\0029\4\31\0045\6?\0005\a>\0005\b<\0005\t1\0005\n!\0009\v \2=\v\"\n9\v#\2=\v$\n9\v%\2=\v&\n9\v'\2=\v(\n9\v)\2=\v*\n9\v+\2=\v,\n9\v-\2=\v.\n9\v/\2=\v0\n=\n2\t5\n3\0009\v \2=\v4\n9\v#\2=\v5\n9\v%\2=\v6\n9\v'\2=\v7\n9\v)\2=\v8\n9\v+\2=\v9\n9\v-\2=\v:\n9\v/\2=\v;\n=\n\n\t=\t=\b=\b\a\a=\a\6\6B\4\2\0016\4\4\0'\6\5\0B\4\2\0029\4@\4'\6\a\0B\4\2\1K\0\1\0\19load_extension\1\0\0\1\0\0\rmappings\1\0\0\6I\6O\6D\6C\6V\6R\6W\6N\1\0\0\6i\1\0\0\a`i\18toggle_hidden\a`o\topen\a`d\vremove\a`c\tcopy\a`v\tmove\a`r\vrename\a`w\23create_from_prompt\a`n\1\0\0\vcreate\nsetup!<CMD>Telescope git_files<CR>\a8=!<CMD>Telescope git_stash<CR>\a9=#<CMD>Telescope git_commits<CR>\a0=$<CMD>Telescope git_branches<CR>\a-=\"<CMD>Telescope git_status<CR>\a==$<CMD>Telescope file_browser<CR>\a``5<CMD>Telescope lsp_dynamic_workspace_symbols<CR>\a`4,<CMD>Telescope lsp_document_symbols<CR>\a`3#<CMD>Telescope diagnostics<CR>\a`=%<CMD>Telescope spell_suggest<CR>\r`<Space>\6n\29telescope.actions.layout\factions\17file_browser\15extensions\14telescope\frequire\1\0\2\vsilent\2\fnoremap\2\20nvim_set_keymap\bapi\bvim\0" },
+    config = { "\27LJ\2\n©\t\0\0\v\0B\0ƒ\0016\0\0\0009\0\1\0009\0\2\0005\1\3\0006\2\4\0'\4\5\0B\2\2\0029\2\6\0029\2\a\0029\2\b\2\18\3\0\0'\5\t\0'\6\n\0'\a\v\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\f\0'\a\r\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\14\0'\a\15\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\16\0'\a\17\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\18\0'\a\19\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\20\0'\a\21\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\22\0'\a\23\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\24\0'\a\25\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\26\0'\a\27\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\28\0'\a\29\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\30\0'\a\31\0\18\b\1\0B\3\5\0016\3\4\0'\5\5\0B\3\2\0029\3 \0035\5@\0005\6?\0005\a=\0005\b2\0005\t\"\0009\n!\2=\n#\t9\n$\2=\n%\t9\n&\2=\n'\t9\n(\2=\n)\t9\n*\2=\n+\t9\n,\2=\n-\t9\n.\2=\n/\t9\n0\2=\n1\t=\t3\b5\t4\0009\n!\2=\n5\t9\n$\2=\n6\t9\n&\2=\n7\t9\n(\2=\n8\t9\n*\2=\n9\t9\n,\2=\n:\t9\n.\2=\n;\t9\n0\2=\n<\t=\t\t\b=\b>\a=\a\a\6=\6\6\5B\3\2\0016\3\4\0'\5\5\0B\3\2\0029\3A\3'\5\a\0B\3\2\1K\0\1\0\19load_extension\1\0\0\1\0\0\rmappings\1\0\0\6I\6O\6D\6C\6V\6R\6W\6N\1\0\0\6i\1\0\0\a`i\18toggle_hidden\a`o\topen\a`d\vremove\a`c\tcopy\a`v\tmove\a`r\vrename\a`w\23create_from_prompt\a`n\1\0\0\vcreate\nsetup <CMD>Telescope commands<CR>\n`<CR>!<CMD>Telescope git_files<CR>\a8=!<CMD>Telescope git_stash<CR>\a9=#<CMD>Telescope git_commits<CR>\a0=$<CMD>Telescope git_branches<CR>\a-=\"<CMD>Telescope git_status<CR>\a==$<CMD>Telescope file_browser<CR>\a``5<CMD>Telescope lsp_dynamic_workspace_symbols<CR>\a`4,<CMD>Telescope lsp_document_symbols<CR>\a`3#<CMD>Telescope diagnostics<CR>\a`=%<CMD>Telescope spell_suggest<CR>\r`<Space>\6n\factions\17file_browser\15extensions\14telescope\frequire\1\0\2\fnoremap\2\vsilent\2\20nvim_set_keymap\bapi\bvim\0" },
     loaded = true,
     path = "/Users/andrejprokopenko/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
@@ -219,42 +230,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: neoformat
-time([[Config for neoformat]], true)
-try_loadstring("\27LJ\2\n®\2\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ž\2                let g:neoformat_run_all_formatters = 1\n                let g:neoformat_try_node_exe = 1\n\n                augroup fmt\n                    autocmd!\n                    autocmd BufWritePre * undojoin | Neoformat\n                augroup END\n            \bcmd\bvim\0", "config", "neoformat")
-time([[Config for neoformat]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\n”\t\0\0\f\0A\0€\0016\0\0\0009\0\1\0009\0\2\0005\1\3\0006\2\4\0'\4\5\0B\2\2\0029\2\6\0029\2\a\0029\2\b\0026\3\4\0'\5\t\0B\3\2\2\18\4\0\0'\6\n\0'\a\v\0'\b\f\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\r\0'\b\14\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\15\0'\b\16\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\17\0'\b\18\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\19\0'\b\20\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\21\0'\b\22\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\23\0'\b\24\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\25\0'\b\26\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\27\0'\b\28\0\18\t\1\0B\4\5\1\18\4\0\0'\6\n\0'\a\29\0'\b\30\0\18\t\1\0B\4\5\0016\4\4\0'\6\5\0B\4\2\0029\4\31\0045\6?\0005\a>\0005\b<\0005\t1\0005\n!\0009\v \2=\v\"\n9\v#\2=\v$\n9\v%\2=\v&\n9\v'\2=\v(\n9\v)\2=\v*\n9\v+\2=\v,\n9\v-\2=\v.\n9\v/\2=\v0\n=\n2\t5\n3\0009\v \2=\v4\n9\v#\2=\v5\n9\v%\2=\v6\n9\v'\2=\v7\n9\v)\2=\v8\n9\v+\2=\v9\n9\v-\2=\v:\n9\v/\2=\v;\n=\n\n\t=\t=\b=\b\a\a=\a\6\6B\4\2\0016\4\4\0'\6\5\0B\4\2\0029\4@\4'\6\a\0B\4\2\1K\0\1\0\19load_extension\1\0\0\1\0\0\rmappings\1\0\0\6I\6O\6D\6C\6V\6R\6W\6N\1\0\0\6i\1\0\0\a`i\18toggle_hidden\a`o\topen\a`d\vremove\a`c\tcopy\a`v\tmove\a`r\vrename\a`w\23create_from_prompt\a`n\1\0\0\vcreate\nsetup!<CMD>Telescope git_files<CR>\a8=!<CMD>Telescope git_stash<CR>\a9=#<CMD>Telescope git_commits<CR>\a0=$<CMD>Telescope git_branches<CR>\a-=\"<CMD>Telescope git_status<CR>\a==$<CMD>Telescope file_browser<CR>\a``5<CMD>Telescope lsp_dynamic_workspace_symbols<CR>\a`4,<CMD>Telescope lsp_document_symbols<CR>\a`3#<CMD>Telescope diagnostics<CR>\a`=%<CMD>Telescope spell_suggest<CR>\r`<Space>\6n\29telescope.actions.layout\factions\17file_browser\15extensions\14telescope\frequire\1\0\2\vsilent\2\fnoremap\2\20nvim_set_keymap\bapi\bvim\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-try_loadstring("\27LJ\2\nc\0\2\a\0\5\0\b6\2\0\0009\2\1\0029\2\2\2\18\4\1\0'\5\3\0'\6\4\0B\2\4\1K\0\1\0\27v:lua.vim.lsp.omnifunc\romnifunc\24nvim_buf_set_option\bapi\bvim½\6\1\0\14\0#\0L6\0\0\0009\0\1\0009\0\2\0005\1\3\0005\2\4\0006\3\5\0'\5\6\0B\3\2\0029\3\a\0036\5\0\0009\5\b\0059\5\t\0059\5\n\5B\5\1\0A\3\0\0023\4\v\0\18\5\0\0'\a\f\0'\b\r\0'\t\14\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\15\0'\t\16\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\17\0'\t\18\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\19\0'\t\20\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\21\0'\t\22\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\23\0'\t\24\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\25\0'\t\26\0\18\n\1\0B\5\5\0016\5\27\0\18\a\2\0B\5\2\4H\b\v€6\n\5\0'\f\28\0B\n\2\0028\n\t\n9\n\29\n5\f\30\0=\4\31\f=\3 \f5\r!\0=\r\"\fB\n\2\1F\b\3\3R\bóK\0\1\0\nflags\1\0\1\26debounce_text_changes\3–\1\17capabilities\14on_attach\1\0\0\nsetup\14lspconfig\npairs/<CMD>lua vim.lsp.buf.type_definition()<CR>\a`s*<CMD>lua vim.lsp.buf.definition()<CR>\a`a&<cmd>lua vim.lsp.buf.rename()<CR>\a`r,<cmd>lua vim.diagnostic.goto_next()<CR>\a`w,<cmd>lua vim.diagnostic.goto_prev()<CR>\a`q+<cmd>lua vim.lsp.buf.code_action()<CR>\t<CR>%<cmd>lua vim.lsp.buf.hover()<CR>\6K\6n\0\29make_client_capabilities\rprotocol\blsp\24update_capabilities\17cmp_nvim_lsp\frequire\1\3\0\0\fpyright\rtsserver\1\0\2\vsilent\2\fnoremap\2\20nvim_set_keymap\bapi\bvim\0", "config", "nvim-lspconfig")
-time([[Config for nvim-lspconfig]], false)
--- Config for: nvim-lsp-installer
-time([[Config for nvim-lsp-installer]], true)
-try_loadstring("\27LJ\2\n%\0\1\6\0\1\0\0064\1\0\0\18\4\0\0009\2\0\0\18\5\1\0B\2\3\1K\0\1\0\nsetupO\1\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0003\2\3\0B\0\2\1K\0\1\0\0\20on_server_ready\23nvim-lsp-installer\frequire\0", "config", "nvim-lsp-installer")
-time([[Config for nvim-lsp-installer]], false)
--- Config for: wilder.nvim
-time([[Config for wilder.nvim]], true)
-try_loadstring("\27LJ\2\nç\1\0\0\n\0\r\0\0196\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\0019\1\6\0'\3\a\0009\4\b\0009\6\t\0005\b\v\0005\t\n\0=\t\f\bB\6\2\0A\4\0\0A\1\1\1K\0\1\0\15highlights\1\0\1\vborder\frounded\1\0\1\vborder\vNormal\27popupmenu_border_theme\23popupmenu_renderer\rrenderer\15set_option\nmodes\1\0\0\1\4\0\0\6:\6/\6?\nsetup\vwilder\frequire\0", "config", "wilder.nvim")
-time([[Config for wilder.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\nW\0\4\n\1\4\0\14\14\0\3\0X\4\1€4\3\0\0-\4\0\0=\4\0\0036\4\1\0009\4\2\0049\4\3\4\18\6\0\0\18\a\1\0\18\b\2\0\18\t\3\0B\4\5\1K\0\1\0\0À\bset\vkeymap\bvim\vbuffer#\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0\0\14next_hunkg\1\0\3\1\a\0\0156\0\0\0009\0\1\0009\0\2\0\15\0\0\0X\1\2€'\0\3\0002\0\a€6\0\0\0009\0\4\0003\2\5\0B\0\2\1'\0\6\0002\0\0€L\0\2\0L\0\2\0\1À\r<Ignore>\0\rschedule\a`[\tdiff\awo\bvim#\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0\0\14prev_hunkg\1\0\3\1\a\0\0156\0\0\0009\0\1\0009\0\2\0\15\0\0\0X\1\2€'\0\3\0002\0\a€6\0\0\0009\0\4\0003\2\5\0B\0\2\1'\0\6\0002\0\0€L\0\2\0L\0\2\0\1À\r<Ignore>\0\rschedule\a`]\tdiff\awo\bvim(\0\0\3\1\2\0\5-\0\0\0009\0\0\0'\2\1\0B\0\2\1K\0\1\0\1À\6~\rdiffthisâ\3\1\1\t\0\28\0:6\1\0\0'\3\1\0B\1\2\0023\2\2\0\18\3\2\0'\5\3\0'\6\4\0003\a\5\0005\b\6\0B\3\5\1\18\3\2\0'\5\3\0'\6\a\0003\a\b\0005\b\t\0B\3\5\1\18\3\2\0'\5\3\0'\6\n\0009\a\v\1B\3\4\1\18\3\2\0'\5\3\0'\6\f\0009\a\r\1B\3\4\1\18\3\2\0'\5\3\0'\6\14\0003\a\15\0B\3\4\1\18\3\2\0'\5\3\0'\6\16\0009\a\17\1B\3\4\1\18\3\2\0005\5\18\0'\6\19\0'\a\20\0B\3\4\1\18\3\2\0005\5\21\0'\6\22\0'\a\23\0B\3\4\1\18\3\2\0'\5\3\0'\6\24\0'\a\25\0B\3\4\1\18\3\2\0'\5\3\0'\6\26\0'\a\27\0B\3\4\0012\0\0€K\0\1\0 <CMD>Gitsigns next_hunk<CR>\a`x <CMD>Gitsigns prev_hunk<CR>\a`z&<CMD>Gitsigns undo_stage_hunk<CR>\aHj\1\3\0\0\6n\6v!<CMD>Gitsigns stage_hunk<CR>\aHh\1\3\0\0\6n\6v\19toggle_deleted\aHd\0\aHD\rdiffthis\aHJ\17preview_hunk\aHH\1\0\1\texpr\2\0\a`]\1\0\1\texpr\2\0\a`[\6n\0\rgitsigns\frequired\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0003\3\4\0=\3\5\2B\0\2\1K\0\1\0\14on_attach\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: nvim-transparent
 time([[Config for nvim-transparent]], true)
 try_loadstring("\27LJ\2\nñ\1\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\2B\0\2\1K\0\1\0\fexclude\17extra_groups\1\a\0\0\23BufferLineTabClose\29BufferlineBufferSelected\19BufferLineFill\25BufferLineBackground\24BufferLineSeparator BufferLineIndicatorSelected\1\0\1\venable\2\nsetup\16transparent\frequire\0", "config", "nvim-transparent")
 time([[Config for nvim-transparent]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\2\nC\0\1\4\0\4\0\a6\1\0\0'\3\1\0B\1\2\0029\1\2\0019\3\3\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequireÇ\1\0\1\6\1\b\0\26-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\18€-\1\0\0009\1\1\1B\1\1\2\14\0\1\0X\2\t€-\2\0\0009\2\2\0025\4\5\0-\5\0\0009\5\3\0059\5\4\5=\5\6\4B\2\2\1X\2\6€-\2\0\0009\2\a\2B\2\1\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\0À\fconfirm\rbehavior\1\0\0\vSelect\19SelectBehavior\21select_next_item\23get_selected_entry\fvisible¸\3\1\0\v\0\29\00036\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\1'\2\5\0=\2\4\0019\1\6\0005\3\n\0005\4\b\0003\5\a\0=\5\t\4=\4\v\0035\4\15\0009\5\f\0009\5\r\0059\5\14\5B\5\1\2=\5\16\0049\5\f\0009\5\r\0059\5\14\5B\5\1\2=\5\17\4=\4\r\0039\4\18\0009\4\19\0049\4\20\0045\6\23\0009\a\18\0003\t\21\0005\n\22\0B\a\3\2=\a\24\6B\4\2\2=\4\18\0039\4\f\0009\4\25\0044\6\3\0005\a\26\0>\a\1\0065\a\27\0>\a\2\0064\a\3\0005\b\28\0>\b\1\aB\4\3\2=\4\25\3B\1\2\0012\0\0€K\0\1\0\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\fsources\n<Tab>\1\0\0\1\4\0\0\6i\6s\6c\0\vinsert\vpreset\fmapping\18documentation\15completion\1\0\0\rbordered\vwindow\vconfig\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\26menu,menuone,noselect\16completeopt\6o\bvim\bcmp\frequire\0", "config", "nvim-cmp")
-time([[Config for nvim-cmp]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n†\5\0\0\5\0\31\0/6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\t\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\0034\4\0\0=\4\b\3=\3\n\0025\3\f\0005\4\v\0=\4\r\0035\4\14\0=\4\15\0035\4\16\0=\4\17\0035\4\18\0=\4\19\0035\4\20\0=\4\21\0035\4\22\0=\4\23\3=\3\24\0025\3\25\0004\4\0\0=\4\r\0034\4\0\0=\4\15\0035\4\26\0=\4\17\0035\4\27\0=\4\19\0034\4\0\0=\4\21\0034\4\0\0=\4\23\3=\3\28\0024\3\0\0=\3\29\0024\3\0\0=\3\30\2B\0\2\1K\0\1\0\15extensions\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\23disabled_filetypes\23section_separators\1\0\2\tleft\bî‚°\nright\bî‚²\25component_separators\1\0\2\tleft\bî‚±\nright\bî‚³\1\0\4\25always_divide_middle\2\17globalstatus\1\ntheme\fonedark\18icons_enabled\2\nsetup\flualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
+-- Config for: nvim-ts-autotag
+time([[Config for nvim-ts-autotag]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
+time([[Config for nvim-ts-autotag]], false)
 -- Config for: mini.nvim
 time([[Config for mini.nvim]], true)
 try_loadstring("\27LJ\2\nÆ\1\0\0\3\0\a\0\0266\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\4\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\5\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\6\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\20mini.cursorword\20mini.trailspace\15mini.pairs\21mini.indentscope\nsetup\17mini.comment\frequire\0", "config", "mini.nvim")
@@ -263,26 +246,58 @@ time([[Config for mini.nvim]], false)
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\n¦\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\2\venable\2&additional_vim_regex_highlighting\1\vindent\1\0\0\1\0\1\venable\2\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
-time([[Config for nvim-colorizer.lua]], false)
--- Config for: nvim-ts-autotag
-time([[Config for nvim-ts-autotag]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
-time([[Config for nvim-ts-autotag]], false)
--- Config for: telescope-file-browser.nvim
-time([[Config for telescope-file-browser.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "telescope-file-browser.nvim")
-time([[Config for telescope-file-browser.nvim]], false)
+-- Config for: neoformat
+time([[Config for neoformat]], true)
+try_loadstring("\27LJ\2\n®\2\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ž\2                let g:neoformat_run_all_formatters = 1\n                let g:neoformat_try_node_exe = 1\n\n                augroup fmt\n                    autocmd!\n                    autocmd BufWritePre * undojoin | Neoformat\n                augroup END\n            \bcmd\bvim\0", "config", "neoformat")
+time([[Config for neoformat]], false)
+-- Config for: nvim-lsp-installer
+time([[Config for nvim-lsp-installer]], true)
+try_loadstring("\27LJ\2\n%\0\1\6\0\1\0\0064\1\0\0\18\4\0\0009\2\0\0\18\5\1\0B\2\3\1K\0\1\0\nsetupO\1\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0003\2\3\0B\0\2\1K\0\1\0\0\20on_server_ready\23nvim-lsp-installer\frequire\0", "config", "nvim-lsp-installer")
+time([[Config for nvim-lsp-installer]], false)
+-- Config for: wilder.nvim
+time([[Config for wilder.nvim]], true)
+try_loadstring("\27LJ\2\nç\1\0\0\n\0\r\0\0196\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\0019\1\6\0'\3\a\0009\4\b\0009\6\t\0005\b\v\0005\t\n\0=\t\f\bB\6\2\0A\4\0\0A\1\1\1K\0\1\0\15highlights\1\0\1\vborder\frounded\1\0\1\vborder\vNormal\27popupmenu_border_theme\23popupmenu_renderer\rrenderer\15set_option\nmodes\1\0\0\1\4\0\0\6:\6/\6?\nsetup\vwilder\frequire\0", "config", "wilder.nvim")
+time([[Config for wilder.nvim]], false)
 -- Config for: numb.nvim
 time([[Config for numb.nvim]], true)
 try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tnumb\frequire\0", "config", "numb.nvim")
 time([[Config for numb.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\nC\0\1\4\0\4\0\a6\1\0\0'\3\1\0B\1\2\0029\1\2\0019\3\3\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequireÇ\1\0\1\6\1\b\0\26-\1\0\0009\1\0\1B\1\1\2\15\0\1\0X\2\18€-\1\0\0009\1\1\1B\1\1\2\14\0\1\0X\2\t€-\2\0\0009\2\2\0025\4\5\0-\5\0\0009\5\3\0059\5\4\5=\5\6\4B\2\2\1X\2\6€-\2\0\0009\2\a\2B\2\1\1X\1\2€\18\1\0\0B\1\1\1K\0\1\0\0À\fconfirm\rbehavior\1\0\0\vSelect\19SelectBehavior\21select_next_item\23get_selected_entry\fvisible¸\3\1\0\v\0\29\00036\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\1'\2\5\0=\2\4\0019\1\6\0005\3\n\0005\4\b\0003\5\a\0=\5\t\4=\4\v\0035\4\15\0009\5\f\0009\5\r\0059\5\14\5B\5\1\2=\5\16\0049\5\f\0009\5\r\0059\5\14\5B\5\1\2=\5\17\4=\4\r\0039\4\18\0009\4\19\0049\4\20\0045\6\23\0009\a\18\0003\t\21\0005\n\22\0B\a\3\2=\a\24\6B\4\2\2=\4\18\0039\4\f\0009\4\25\0044\6\3\0005\a\26\0>\a\1\0065\a\27\0>\a\2\0064\a\3\0005\b\28\0>\b\1\aB\4\3\2=\4\25\3B\1\2\0012\0\0€K\0\1\0\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\fsources\n<Tab>\1\0\0\1\4\0\0\6i\6s\6c\0\vinsert\vpreset\fmapping\18documentation\15completion\1\0\0\rbordered\vwindow\vconfig\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\26menu,menuone,noselect\16completeopt\6o\bvim\bcmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time([[Config for nvim-colorizer.lua]], false)
 -- Config for: flutter-tools.nvim
 time([[Config for flutter-tools.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18flutter-tools\frequire\0", "config", "flutter-tools.nvim")
 time([[Config for flutter-tools.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n™\5\0\0\b\0 \00026\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\t\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\0034\4\0\0=\4\b\3=\3\n\0025\3\f\0005\4\v\0=\4\r\0035\4\14\0=\4\15\0035\4\16\0006\5\0\0'\a\17\0B\5\2\0029\5\18\5>\5\2\4=\4\19\0035\4\20\0=\4\21\0035\4\22\0=\4\23\3=\3\24\0025\3\25\0004\4\0\0=\4\r\0034\4\0\0=\4\15\0035\4\26\0=\4\19\0035\4\27\0=\4\21\0034\4\0\0=\4\28\0034\4\0\0=\4\23\3=\3\29\0024\3\0\0=\3\30\0024\3\0\0=\3\31\2B\0\2\1K\0\1\0\15extensions\ftabline\22inactive_sections\14lualine_y\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\15statusline\rpomodoro\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\23disabled_filetypes\23section_separators\1\0\2\tleft\bî‚°\nright\bî‚²\25component_separators\1\0\2\tleft\bî‚±\nright\bî‚³\1\0\4\25always_divide_middle\2\17globalstatus\1\ntheme\fonedark\18icons_enabled\2\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\nW\0\4\n\1\4\0\14\14\0\3\0X\4\1€4\3\0\0-\4\0\0=\4\0\0036\4\1\0009\4\2\0049\4\3\4\18\6\0\0\18\a\1\0\18\b\2\0\18\t\3\0B\4\5\1K\0\1\0\0À\bset\vkeymap\bvim\vbuffer#\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0\0\14next_hunkg\1\0\3\1\a\0\0156\0\0\0009\0\1\0009\0\2\0\15\0\0\0X\1\2€'\0\3\0002\0\a€6\0\0\0009\0\4\0003\2\5\0B\0\2\1'\0\6\0002\0\0€L\0\2\0L\0\2\0\1À\r<Ignore>\0\rschedule\a`[\tdiff\awo\bvim#\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0\0\14prev_hunkg\1\0\3\1\a\0\0156\0\0\0009\0\1\0009\0\2\0\15\0\0\0X\1\2€'\0\3\0002\0\a€6\0\0\0009\0\4\0003\2\5\0B\0\2\1'\0\6\0002\0\0€L\0\2\0L\0\2\0\1À\r<Ignore>\0\rschedule\a`]\tdiff\awo\bvim(\0\0\3\1\2\0\5-\0\0\0009\0\0\0'\2\1\0B\0\2\1K\0\1\0\1À\6~\rdiffthisâ\3\1\1\t\0\28\0:6\1\0\0'\3\1\0B\1\2\0023\2\2\0\18\3\2\0'\5\3\0'\6\4\0003\a\5\0005\b\6\0B\3\5\1\18\3\2\0'\5\3\0'\6\a\0003\a\b\0005\b\t\0B\3\5\1\18\3\2\0'\5\3\0'\6\n\0009\a\v\1B\3\4\1\18\3\2\0'\5\3\0'\6\f\0009\a\r\1B\3\4\1\18\3\2\0'\5\3\0'\6\14\0003\a\15\0B\3\4\1\18\3\2\0'\5\3\0'\6\16\0009\a\17\1B\3\4\1\18\3\2\0005\5\18\0'\6\19\0'\a\20\0B\3\4\1\18\3\2\0005\5\21\0'\6\22\0'\a\23\0B\3\4\1\18\3\2\0'\5\3\0'\6\24\0'\a\25\0B\3\4\1\18\3\2\0'\5\3\0'\6\26\0'\a\27\0B\3\4\0012\0\0€K\0\1\0 <CMD>Gitsigns next_hunk<CR>\a`x <CMD>Gitsigns prev_hunk<CR>\a`z&<CMD>Gitsigns undo_stage_hunk<CR>\aHj\1\3\0\0\6n\6v!<CMD>Gitsigns stage_hunk<CR>\aHh\1\3\0\0\6n\6v\19toggle_deleted\aHd\0\aHD\rdiffthis\aHJ\17preview_hunk\aHH\1\0\1\texpr\2\0\a`]\1\0\1\texpr\2\0\a`[\6n\0\rgitsigns\frequired\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0003\3\4\0=\3\5\2B\0\2\1K\0\1\0\14on_attach\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\nc\0\2\a\0\5\0\b6\2\0\0009\2\1\0029\2\2\2\18\4\1\0'\5\3\0'\6\4\0B\2\4\1K\0\1\0\27v:lua.vim.lsp.omnifunc\romnifunc\24nvim_buf_set_option\bapi\bvim½\6\1\0\14\0#\0L6\0\0\0009\0\1\0009\0\2\0005\1\3\0005\2\4\0006\3\5\0'\5\6\0B\3\2\0029\3\a\0036\5\0\0009\5\b\0059\5\t\0059\5\n\5B\5\1\0A\3\0\0023\4\v\0\18\5\0\0'\a\f\0'\b\r\0'\t\14\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\15\0'\t\16\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\17\0'\t\18\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\19\0'\t\20\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\21\0'\t\22\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\23\0'\t\24\0\18\n\1\0B\5\5\1\18\5\0\0'\a\f\0'\b\25\0'\t\26\0\18\n\1\0B\5\5\0016\5\27\0\18\a\2\0B\5\2\4H\b\v€6\n\5\0'\f\28\0B\n\2\0028\n\t\n9\n\29\n5\f\30\0=\4\31\f=\3 \f5\r!\0=\r\"\fB\n\2\1F\b\3\3R\bóK\0\1\0\nflags\1\0\1\26debounce_text_changes\3–\1\17capabilities\14on_attach\1\0\0\nsetup\14lspconfig\npairs/<CMD>lua vim.lsp.buf.type_definition()<CR>\a`s*<CMD>lua vim.lsp.buf.definition()<CR>\a`a&<cmd>lua vim.lsp.buf.rename()<CR>\a`r,<cmd>lua vim.diagnostic.goto_next()<CR>\a`w,<cmd>lua vim.diagnostic.goto_prev()<CR>\a`q+<cmd>lua vim.lsp.buf.code_action()<CR>\t<CR>%<cmd>lua vim.lsp.buf.hover()<CR>\6K\6n\0\29make_client_capabilities\rprotocol\blsp\24update_capabilities\17cmp_nvim_lsp\frequire\1\3\0\0\fpyright\rtsserver\1\0\2\fnoremap\2\vsilent\2\20nvim_set_keymap\bapi\bvim\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: telescope-file-browser.nvim
+time([[Config for telescope-file-browser.nvim]], true)
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "telescope-file-browser.nvim")
+time([[Config for telescope-file-browser.nvim]], false)
+-- Config for: pomodoro.nvim
+time([[Config for pomodoro.nvim]], true)
+try_loadstring("\27LJ\2\nÙ\2\0\0\b\0\15\0\0296\0\0\0009\0\1\0009\0\2\0005\1\3\0006\2\4\0'\4\5\0B\2\2\0029\2\6\0025\4\a\0B\2\2\1\18\2\0\0'\4\b\0'\5\t\0'\6\n\0\18\a\1\0B\2\5\1\18\2\0\0'\4\b\0'\5\v\0'\6\f\0\18\a\1\0B\2\5\1\18\2\0\0'\4\b\0'\5\r\0'\6\14\0\18\a\1\0B\2\5\1K\0\1\0\28<CMD>PomodoroStatus<CR>\a\\\\\26<CMD>PomodoroStop<CR>\a[]\27<CMD>PomodoroStart<CR>\a]\\\6n\1\0\4\21time_break_short\3\5\14time_work\3\25\25timers_to_long_break\3\4\20time_break_long\3\20\nsetup\rpomodoro\frequire\1\0\2\fnoremap\2\vsilent\2\20nvim_set_keymap\bapi\bvim\0", "config", "pomodoro.nvim")
+time([[Config for pomodoro.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\n©\t\0\0\v\0B\0ƒ\0016\0\0\0009\0\1\0009\0\2\0005\1\3\0006\2\4\0'\4\5\0B\2\2\0029\2\6\0029\2\a\0029\2\b\2\18\3\0\0'\5\t\0'\6\n\0'\a\v\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\f\0'\a\r\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\14\0'\a\15\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\16\0'\a\17\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\18\0'\a\19\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\20\0'\a\21\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\22\0'\a\23\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\24\0'\a\25\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\26\0'\a\27\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\28\0'\a\29\0\18\b\1\0B\3\5\1\18\3\0\0'\5\t\0'\6\30\0'\a\31\0\18\b\1\0B\3\5\0016\3\4\0'\5\5\0B\3\2\0029\3 \0035\5@\0005\6?\0005\a=\0005\b2\0005\t\"\0009\n!\2=\n#\t9\n$\2=\n%\t9\n&\2=\n'\t9\n(\2=\n)\t9\n*\2=\n+\t9\n,\2=\n-\t9\n.\2=\n/\t9\n0\2=\n1\t=\t3\b5\t4\0009\n!\2=\n5\t9\n$\2=\n6\t9\n&\2=\n7\t9\n(\2=\n8\t9\n*\2=\n9\t9\n,\2=\n:\t9\n.\2=\n;\t9\n0\2=\n<\t=\t\t\b=\b>\a=\a\a\6=\6\6\5B\3\2\0016\3\4\0'\5\5\0B\3\2\0029\3A\3'\5\a\0B\3\2\1K\0\1\0\19load_extension\1\0\0\1\0\0\rmappings\1\0\0\6I\6O\6D\6C\6V\6R\6W\6N\1\0\0\6i\1\0\0\a`i\18toggle_hidden\a`o\topen\a`d\vremove\a`c\tcopy\a`v\tmove\a`r\vrename\a`w\23create_from_prompt\a`n\1\0\0\vcreate\nsetup <CMD>Telescope commands<CR>\n`<CR>!<CMD>Telescope git_files<CR>\a8=!<CMD>Telescope git_stash<CR>\a9=#<CMD>Telescope git_commits<CR>\a0=$<CMD>Telescope git_branches<CR>\a-=\"<CMD>Telescope git_status<CR>\a==$<CMD>Telescope file_browser<CR>\a``5<CMD>Telescope lsp_dynamic_workspace_symbols<CR>\a`4,<CMD>Telescope lsp_document_symbols<CR>\a`3#<CMD>Telescope diagnostics<CR>\a`=%<CMD>Telescope spell_suggest<CR>\r`<Space>\6n\factions\17file_browser\15extensions\14telescope\frequire\1\0\2\fnoremap\2\vsilent\2\20nvim_set_keymap\bapi\bvim\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
