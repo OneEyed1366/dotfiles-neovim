@@ -21,4 +21,8 @@ map("n", "`<Tab>", [[<CMD>Telescope buffers<CR>]], default_opts)
 map("n", "``", [[<CMD>lua require"lir.float".toggle()<CR>]], default_opts)
 map("n", "`1", [[<CMD>Telescope fd<CR>]], default_opts)
 map("n", "`2", [[<CMD>Telescope live_grep<CR>]], default_opts)
+---------------------------------------------------------
+-- Visual selection
+---------------------------------------------------------
+map("v", "`c", [["+y<CR>]], default_opts)
 
