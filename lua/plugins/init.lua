@@ -1,17 +1,21 @@
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+if (vim.g.vscode) then
 
-return require('packer').startup(function()
-    use 'wbthomason/packer.nvim'
-    use {"powerman/vim-plugin-ruscmd"}
-    use { "kyazdani42/nvim-web-devicons", opt = true }
+else
+    -- Only required if you have packer configured as `opt`
+    vim.cmd [[packadd packer.nvim]]
 
-    require("plugins/themes")
-    require("plugins/transparent")
-    require("plugins/lualine")
-    require("plugins/git-blame")
-    require("plugins/start-screen")
-    require("plugins/wilder")
-    require("plugins/telescope")
-    require("plugins/lsp-and-some-necessary-stuff")
-end)
+    return require('packer').startup(function()
+        use 'wbthomason/packer.nvim'
+        use {"powerman/vim-plugin-ruscmd"}
+        use { "kyazdani42/nvim-web-devicons", opt = true }
+
+        require("plugins/themes")
+        require("plugins/transparent")
+        require("plugins/lualine")
+        require("plugins/git-blame")
+        require("plugins/start-screen")
+        require("plugins/wilder")
+        require("plugins/telescope")
+        require("plugins/lsp-and-some-necessary-stuff")
+    end)
+end
