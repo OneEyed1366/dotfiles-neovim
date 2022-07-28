@@ -17,5 +17,6 @@ else
         require("plugins/wilder")
         require("plugins/telescope")
         require("plugins/lsp-and-some-necessary-stuff")
+        require("plugins/fterm")
     end)
 end

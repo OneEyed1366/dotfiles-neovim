@@ -12,6 +12,8 @@ require("packer").use {
        -- Basic stuff
         map("n", "`<Space>", "<CMD>Telescope buffers<CR>", opts)
         map("n", "`=", "<CMD>Telescope diagnostics<CR>", opts)
+        -- Helpeps
+        map("n", "`h", "<CMD>Telescope man_pages<CR>", opts)
         -- Symbols (functions, variables, etc...)
         map("n", "`3", "<CMD>Telescope lsp_document_symbols<CR>", opts)
         map("n", "`4", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", opts)

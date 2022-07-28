@@ -135,7 +135,16 @@ require("packer").use {
         end },
         { "nacro90/numb.nvim", config = function()
             require("numb").setup()
+        end },
+        { "ldelossa/litee.nvim", requires = {
+            { "ldelossa/litee-filetree.nvim" },
+            { "kyazdani42/nvim-web-devicons" },
+        }, config = function ()
+            require("litee.lib").setup()
+            require("litee.filetree").setup({
+                use_web_devicons = false,
+                icon_set_custom = {dir = "dir:"},
+            })
         end }
     },
-
 }

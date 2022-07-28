@@ -1,12 +1,10 @@
 require("packer").use {
 	"gelguy/wilder.nvim",
 	config = function()
-        	local wilder = require("wilder")
-		
+        local wilder = require("wilder")
 		wilder.setup({
-                	modes = {":", "/", "?"}
-            	})
-		
+            modes = {":", "/", "?"}
+        })
 		wilder.set_option('renderer', wilder.popupmenu_renderer(
 			wilder.popupmenu_border_theme({
 				highlights = {
@@ -17,6 +15,5 @@ require("packer").use {
 		    		border = 'rounded',
 		  	})
 		))
-
 	end,
 }
