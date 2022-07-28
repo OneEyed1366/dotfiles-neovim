@@ -10,12 +10,14 @@ require("packer").use {
         local fb_actions = require "telescope".extensions.file_browser.actions
 
        -- Basic stuff
-        map("n", "`<Space>", "<CMD>Telescope spell_suggest<CR>", opts)
+        map("n", "`<Space>", "<CMD>Telescope buffers<CR>", opts)
         map("n", "`=", "<CMD>Telescope diagnostics<CR>", opts)
         -- Symbols (functions, variables, etc...)
         map("n", "`3", "<CMD>Telescope lsp_document_symbols<CR>", opts)
         map("n", "`4", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", opts)
         -- File browser
+        map("n", "`1", [[<CMD>Telescope fd<CR>]], opts)
+        map("n", "`2", [[<CMD>Telescope live_grep<CR>]], opts)
         map("n", "``", "<CMD>Telescope file_browser path=%:p:h<CR>", opts)
         -- Git
         map("n", "==", "<CMD>Telescope git_status<CR>", opts)
@@ -57,5 +59,6 @@ require("packer").use {
             }
         }
         require("telescope").load_extension "file_browser"
+        require("telescope").load_extension("flutter")
     end
 }

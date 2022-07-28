@@ -15,6 +15,7 @@ map("n", "qq", [[<CMD>q!<CR>]], default_opts)
 ----------------------------------------------------------
 -- IntelliJ-like keys
 ----------------------------------------------------------
+map('`<CR>', [[<CMD>call VSCodeNotify('keyboard-quickfix.openQuickFix')<CR>]], default_opts)
 -- map("n", "`<Tab>", [[<CMD>Telescope buffers<CR>]], default_opts)
 -- map("n", "``", [[<CMD>lua require"lir.float".toggle()<CR>]], default_opts)
 -- map("n", "`1", [[<CMD>Telescope fd<CR>]], default_opts)
