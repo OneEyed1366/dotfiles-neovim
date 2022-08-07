@@ -11,6 +11,7 @@ else
 
         require("plugins/themes")
         require("plugins/transparent")
+        require("plugins/windows")
         require("plugins/lualine")
         require("plugins/git-blame")
         require("plugins/start-screen")
