@@ -1,4 +1,4 @@
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local default_opts = {noremap = true, silent = true}
 -- Типа "Нажимает" на ESC при быстром нажатии jj, чтобы не тянутся
 map("i", "jk", "<Esc>", {noremap = true})
@@ -18,6 +18,17 @@ map("n", "we", [[<CMD>w<CR>]], default_opts)
 map("n", "ww", [[<CMD>wall<CR>]], default_opts)
 map("n", "qw", [[<CMD>wq<CR>]], default_opts)
 map("n", "qq", [[<CMD>q!<CR>]], default_opts)
+-- LSP
+map("n", "<CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", default_opts)
+map({ "n", "v"}, "FJ", "<cmd>foldclose<CR>", default_opts)
+map({ "n", "v"}, "FK", "<cmd>foldopen<CR>", default_opts)
+map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", default_opts)
+map("n", "`q", "<cmd>lua vim.diagnostic.goto_prev()<CR>", default_opts)
+map("n", "`w", "<cmd>lua vim.diagnostic.goto_next()<CR>", default_opts)
+map("n", "`r", "<cmd>lua vim.lsp.buf.rename()<CR>", default_opts)
+-- Basic LSP stuff
+map("n", "`a", "<CMD>lua vim.lsp.buf.definition()<CR>", default_opts)
+map("n", "`s", "<CMD>lua vim.lsp.buf.type_definition()<CR>", default_opts)
 ----------------------------------------------------------
 -- IntelliJ-like keys
 ----------------------------------------------------------
@@ -26,4 +37,3 @@ map("n", "``", [[<CMD>lua require"lir.float".toggle()<CR>]], default_opts)
 -- Visual selection
 ---------------------------------------------------------
 map("v", "`c", [["+y<CR>]], default_opts)
-
