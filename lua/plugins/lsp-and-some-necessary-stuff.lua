@@ -1,41 +1,33 @@
         require("packer").use {
             "neovim/nvim-lspconfig",
-            config = function()
-                local map = vim.api.nvim_set_keymap
-                local opts = { noremap = true, silent = true }
-                local servers = { "pyright", "tsserver" }
-                local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-                -- after the language server attaches to the current buffer
-                local on_attach = function(client, bufnr)
-                    -- Enable completion triggered by <c-x><c-o>
-                    vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-                end
-
-                -- Mappings.
-                -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-                for _, lsp in pairs(servers) do
-                    require("lspconfig")[lsp].setup {
-                        on_attach = on_attach,
-                        capabilities = capabilities,
-                        flags = {
-                            debounce_text_changes = 150,
-                        }
-                    }
-                end
-            end,
             requires = {
+                    -- TypeScript improvements
+                    { "jose-elias-alvarez/nvim-lsp-ts-utils", },
                     -- Show context of currect code via virtual-lines
                     { "haringsrob/nvim_context_vt" },
                     { "akinsho/flutter-tools.nvim", requires = { { "nvim-lua/plenary.nvim" } }, config = function()
                         require("flutter-tools").setup {}
                     end },
+
                     { "williamboman/nvim-lsp-installer",
                         config = function()
-                            require("nvim-lsp-installer").on_server_ready(function(server)
-                                local opts = {}
+                                local lsp_installer = require("nvim-lsp-installer")
+                                local lspconfig = require("lspconfig")
 
-                                server:setup(opts)
-                            end)
+                                lsp_installer.setup {}
+
+                                lspconfig.util.default_config = vim.tbl_extend(
+                                    "force",
+                                    lspconfig.util.default_config,
+                                    {
+                                        on_attach = on_attach
+                                    }
+                                )
+                            for _, server in ipairs(require("nvim-lsp-installer").get_installed_servers()) do
+                                    local opts = {}
+
+                                    lspconfig[server.name].setup(opts)
+                            end
                         end,
                     },
                     { "hrsh7th/nvim-cmp",
