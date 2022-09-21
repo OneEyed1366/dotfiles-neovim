@@ -6,35 +6,35 @@ require("packer").use {
         local actions = require'lir.actions'
         local mark_actions = require 'lir.mark.actions'
         local clipboard_actions = require'lir.clipboard.actions'
-        
+
         require'lir'.setup {
           show_hidden_files = false,
           devicons_enable = true,
-          mappings = {
-            ['l']     = actions.edit,
-            ['<C-s>'] = actions.split,
-            ['<C-v>'] = actions.vsplit,
-            ['<C-t>'] = actions.tabedit,
-
-            ['h']     = actions.up,
-            ['q']     = actions.quit,
-
-            ['N']     = actions.mkdir,
-            ['n']     = actions.newfile,
-            ['r']     = actions.rename,
-            ['@']     = actions.cd,
-            ['Y']     = actions.yank_path,
-            ['I']     = actions.toggle_show_hidden,
-            ['d']     = actions.delete,
-
-            ['J'] = function()
-              mark_actions.toggle_mark()
-              vim.cmd('normal! j')
-            end,
-            ['c'] = clipboard_actions.copy,
-            ['x'] = clipboard_actions.cut,
-            ['v'] = clipboard_actions.paste,
-          },
+          -- mappings = {
+          --   ['l']     = actions.edit,
+          --   ['<C-s>'] = actions.split,
+          --   ['<C-v>'] = actions.vsplit,
+          --   ['<C-t>'] = actions.tabedit,
+          --
+          --   ['h']     = actions.up,
+          --   ['q']     = actions.quit,
+          --
+          --   ['N']     = actions.mkdir,
+          --   ['n']     = actions.newfile,
+          --   ['r']     = actions.rename,
+          --   ['@']     = actions.cd,
+          --   ['Y']     = actions.yank_path,
+          --   ['I']     = actions.toggle_show_hidden,
+          --   ['d']     = actions.delete,
+          --
+          --   ['J'] = function()
+          --     mark_actions.toggle_mark()
+          --     vim.cmd('normal! j')
+          --   end,
+          --   ['c'] = clipboard_actions.copy,
+          --   ['x'] = clipboard_actions.cut,
+          --   ['v'] = clipboard_actions.paste,
+          -- },
           float = {
             winblend = 0,
             curdir_window = {

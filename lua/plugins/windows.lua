@@ -3,10 +3,10 @@ require("packer").use {
     config = function()
         require("focus").setup()
 
-        vim.api.nvim_set_keymap("n", "f<Space>", "<CMD>close<CR>", { silent = true })
-        vim.api.nvim_set_keymap("n", "fh", "<CMD>FocusSplitLeft<CR>", { silent = true })
-        vim.api.nvim_set_keymap("n", "fj", "<CMD>FocusSplitDown<CR>", { silent = true })
-        vim.api.nvim_set_keymap("n", "fk", "<CMD>FocusSplitUp<CR>", { silent = true })
-        vim.api.nvim_set_keymap("n", "fl", "<CMD>FocusSplitRight<CR>", { silent = true })
+        vim.api.nvim_set_keymap("n", "<Space>w<Space>", "<CMD>close<CR>", { silent = true })
+        vim.api.nvim_set_keymap("n", "<Space>wh", "<CMD>FocusSplitLeft<CR>", { silent = true })
+        vim.api.nvim_set_keymap("n", "<Space>wj", "<CMD>FocusSplitDown<CR>", { silent = true })
+        vim.api.nvim_set_keymap("n", "<Space>wk", "<CMD>FocusSplitUp<CR>", { silent = true })
+        vim.api.nvim_set_keymap("n", "<Space>wl", "<CMD>FocusSplitRight<CR>", { silent = true })
     end
 }

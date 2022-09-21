@@ -10,7 +10,8 @@ require("packer").use {
         local fb_actions = require "telescope".extensions.file_browser.actions
 
        -- Basic stuff
-        map("n", "<Tab>q", "<CMD>Telescope buffers<CR>", opts)
+        map("n", "<Space>.", "<CMD>Telescope file_browser path=%:p:h<CR>", opts)
+        map("n", "<Space>,", "<CMD>Telescope buffers<CR>", opts)
         map("n", "`=", "<CMD>Telescope diagnostics<CR>", opts)
         -- Helpeps
         map("n", "`h", "<CMD>Telescope man_pages<CR>", opts)
@@ -21,7 +22,6 @@ require("packer").use {
         -- File browser
         map("n", "`1", [[<CMD>Telescope fd<CR>]], opts)
         map("n", "`2", [[<CMD>Telescope live_grep<CR>]], opts)
-        map("n", "``", "<CMD>Telescope file_browser path=%:p:h<CR>", opts)
         -- Git
         map("n", "==", "<CMD>Telescope git_status<CR>", opts)
         map("n", "-=", "<CMD>Telescope git_branches<CR>", opts)
@@ -45,17 +45,6 @@ require("packer").use {
                             ["`d"] = fb_actions.remove,
                             ["`o"] = fb_actions.open,
                             ["`i"] = fb_actions.toggle_hidden,
-                        },
-                        ["n"] = {
-                            -- Telescope file browser
-                            ["N"] = fb_actions.create,
-                            ["W"] = fb_actions.create_from_prompt,
-                            ["R"] = fb_actions.rename,
-                            ["E"] = fb_actions.move,
-                            ["C"] = fb_actions.copy,
-                            ["D"] = fb_actions.remove,
-                            ["O"] = fb_actions.open,
-                            ["I"] = fb_actions.toggle_hidden,
                         },
                     }
                 }
