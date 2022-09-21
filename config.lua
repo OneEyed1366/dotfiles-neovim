@@ -29,13 +29,13 @@ doom.use_keybind({
   }},
 -- LSP
   {"<leader>c", name = "+code", {
-    {"<leader>", "<CMD>Telescope lsp_document_symbols<CR>", name = "Buffer Symbols"},
+    {".", "<CMD>Telescope lsp_document_symbols<CR>", name = "Buffer Symbols"},
+    {",", "<CMD>Telescope lsp_references<CR>", name = "Symbol References"},
     {"<CR>", "<CMD>lua vim.lsp.buf.code_action()<CR>", name = "Code Actions"},
     {"r", "<CMD>lua vim.lsp.buf.rename()<CR>", name = "Rename"},
     {"p", "<CMD>lua vim.diagnostic.goto_prev()<CR>", name = "Diagnostic - Prev"},
     {"n", "<CMD>lua vim.diagnostic.goto_next()<CR>", name = "Diagnostic - Next"},
-    {"D", "<CMD>lua vim.lsp.buf.definition()<CR>", name = "GoTo Definition"},
-    {"L", "<CMD>Telescope lsp_references<CR>", name = "Symbol References"},
+    {"a", "<CMD>lua vim.lsp.buf.definition()<CR>", name = "GoTo Definition"},
   }},
 })
 -- PACKAGES

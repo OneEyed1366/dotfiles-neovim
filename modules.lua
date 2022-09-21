@@ -7,6 +7,7 @@
 -- Once done, restart doom-nvim and run `:PackerInstall`.
 
 return {
+  ---
   features = {
     -- Language features
     "annotations", -- Code annotation generator
@@ -26,7 +27,7 @@ return {
     "indentlines", -- Show indent lines with special characters
     "range_highlight", -- Highlight selected range from commands
     "todo_comments", -- Highlight TODO: comments
-    -- "doom_themes",     -- Extra themes for doom
+    "doom_themes",     -- Extra themes for doom
 
     -- UI Components
     "lsp_progress", -- Check status of LSP loading
@@ -37,14 +38,14 @@ return {
     -- "minimap",         -- Shows current position in document
     -- "terminal",        -- Integrated terminal in neovim
     "symbols",         -- Navigate between code symbols using telescope
-    "ranger",          -- File explorer in neovim (TODO: Test)
+    -- "ranger",          -- File explorer in neovim (TODO: Test)
     -- "restclient",      -- Test HTTP requests from neovim (TODO: Test)
     -- "show_registers",  -- Show and navigate between registers
 
     -- Tools
     -- "dap",             -- Debug code through neovim
-    "repl", -- Interactive REPL in neovim
-    "explorer", -- An enhanced filetree explorer
+    -- "repl", -- Interactive REPL in neovim
+    -- "explorer", -- An enhanced filetree explorer
     -- "firenvim",        -- Embed neovim in your browser
     -- "lazygit",         -- Lazy git integration
     "neogit",          -- A git client for neovim
