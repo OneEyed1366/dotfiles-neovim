@@ -12,22 +12,22 @@ require("packer").use {
        -- Basic stuff
         map("n", "<Space>.", "<CMD>Telescope file_browser path=%:p:h<CR>", opts)
         map("n", "<Space>,", "<CMD>Telescope buffers<CR>", opts)
-        map("n", "`=", "<CMD>Telescope diagnostics<CR>", opts)
         -- Helpeps
-        map("n", "`h", "<CMD>Telescope man_pages<CR>", opts)
+        map("n", "<Spacw>h", "<CMD>Telescope man_pages<CR>", opts)
         -- Symbols and References (functions, variables, etc...)
-        map("n", "L", "<CMD>Telescope lsp_references<CR>", opts)
-        map("n", "`3", "<CMD>Telescope lsp_document_symbols<CR>", opts)
-        map("n", "`4", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", opts)
+        map("n", "<Space>ll", "<CMD>Telescope lsp_references<CR>", opts)
+        map("n", "<Space>lt", "<CMD>Telescope diagnostics<CR>", opts)
+        map("n", "<Space>l.", "<CMD>Telescope lsp_document_symbols<CR>", opts)
+        map("n", "<Space>l,", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", opts)
         -- File browser
-        map("n", "`1", [[<CMD>Telescope fd<CR>]], opts)
-        map("n", "`2", [[<CMD>Telescope live_grep<CR>]], opts)
+        map("n", "<Space>f.", [[<CMD>Telescope fd<CR>]], opts)
+        map("n", "<Space>/", [[<CMD>Telescope live_grep<CR>]], opts)
         -- Git
-        map("n", "==", "<CMD>Telescope git_status<CR>", opts)
-        map("n", "-=", "<CMD>Telescope git_branches<CR>", opts)
-        map("n", "0=", "<CMD>Telescope git_commits<CR>", opts)
-        map("n", "9=", "<CMD>Telescope git_stash<CR>", opts)
-        map("n", "8=", "<CMD>Telescope git_files<CR>", opts)
+        map("n", "<Space>g.", "<CMD>Telescope git_files<CR>", opts)
+        map("n", "<Space>gg", "<CMD>Telescope git_status<CR>", opts)
+        map("n", "<Space>gb", "<CMD>Telescope git_branches<CR>", opts)
+        map("n", "<Space>gc", "<CMD>Telescope git_commits<CR>", opts)
+        map("n", "<Space>gs", "<CMD>Telescope git_stash<CR>", opts)
 
         map("n", "`<CR>", "<CMD>Telescope commands<CR>", opts)
 
