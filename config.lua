@@ -23,6 +23,22 @@ doom.use_keybind({
   {"<leader><CR>", "<CMD>Telescope commands<CR>", name = "All commands"},
 -- File Browser
   {"<leader>.", "<CMD>Telescope file_browser path=%:p:h<CR>", name = "File Browser"},
+-- Git
+  {"[", {
+    {"g", "<CMD>lua require\"gitsigns\".next_hunk()<CR>", name = "Prev diff"},
+  }},
+  {"]", {
+    {"g", "<CMD>lua require\"gitsigns\".next_hunk()<CR>", name = "Next diff"},
+  }},
+  {"<leader>g", name = "+git", {
+
+    {"m", "<cmd>lua require\"gitsigns\".stage_hunk()<CR>", name = "Stage"},
+    {"u", "<cmd>lua require\"gitsigns\".undo_stage_hunk()<CR>", name = "Unstage"},
+    {"x", "<cmd>lua require\"gitsigns\".reset_hunk()<CR>", name = "Reset hunk"},
+    {"X", "<cmd>lua require\"gitsigns\".reset_buffer()<CR>", name = "Reset buffer"},
+    {",", "<cmd>lua require\"gitsigns\".preview_hunk()<CR>", name = "Preview"},
+    {"t", "<cmd>lua require\"gitsigns\".blame_line()<CR>", name = "Blame line"},
+  }},
 -- UI
   {"<leader>t", name = "+tweak", {
     {"b", "<CMD>TransparentToggle<CR>", name = "Toggle Background-Transparent mode"},
