@@ -25,7 +25,7 @@ doom.use_keybind({
   {"<leader>.", "<CMD>Telescope file_browser path=%:p:h<CR>", name = "File Browser"},
 -- Git
   {"[", {
-    {"g", "<CMD>lua require\"gitsigns\".next_hunk()<CR>", name = "Prev diff"},
+    {"g", "<CMD>lua require\"gitsigns\".prev_hunk()<CR>", name = "Prev diff"},
   }},
   {"]", {
     {"g", "<CMD>lua require\"gitsigns\".next_hunk()<CR>", name = "Next diff"},
