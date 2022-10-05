@@ -26,12 +26,13 @@ doom.use_keybind({
 -- Git
   {"[", {
     {"g", "<CMD>lua require\"gitsigns\".prev_hunk()<CR>", name = "Prev diff"},
+    {"[", "<CMD>lua vim.diagnostic.goto_prev()<CR>", name = "Prev Code diagnostic"},
   }},
   {"]", {
     {"g", "<CMD>lua require\"gitsigns\".next_hunk()<CR>", name = "Next diff"},
+    {"]", "<CMD>lua vim.diagnostic.goto_next()<CR>", name = "Next Code diagnostic"},
   }},
   {"<leader>g", name = "+git", {
-
     {"m", "<cmd>lua require\"gitsigns\".stage_hunk()<CR>", name = "Stage"},
     {"u", "<cmd>lua require\"gitsigns\".undo_stage_hunk()<CR>", name = "Unstage"},
     {"x", "<cmd>lua require\"gitsigns\".reset_hunk()<CR>", name = "Reset hunk"},
