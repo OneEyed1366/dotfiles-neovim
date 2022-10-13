@@ -63,6 +63,10 @@ doom.use_keybind({
     {"r", "<CMD>lua vim.lsp.buf.rename()<CR>", name = "Rename"},
     {"a", "<CMD>lua vim.lsp.buf.definition()<CR>", name = "GoTo Definition"},
   }},
+-- Open smth
+  {"<leader>o", name = "+open", {
+    {"t", "<CMD>terminal<CR>", "terminal"}
+  }},
 })
 -- PACKAGES
 doom.use_package({
