@@ -33,7 +33,14 @@ doom.use_keybind({
     {"]", "<CMD>lua vim.diagnostic.goto_next()<CR>", name = "Next Code diagnostic"},
   }},
   {"<leader>g", name = "+git", {
-    {"m", "<cmd>lua require\"gitsigns\".stage_hunk()<CR>", name = "Stage"},
+    {"C", name = "+Commit", {
+      {"c", "<CMD>terminal git commit<CR>", name = "commit"},
+      {"a", "<CMD>terminal git commit --amend<CR>", name = "amend"}
+    }},
+    {"p", "<cmd>terminal git pull<CR>", name = "Pull"},
+    {"P", "<cmd>terminal git push<CR>", name = "Pull"},
+    {"m", "<cmd>lua require\"gitsigns\".stage_hunk()<CR>", name = "Stage hunk"},
+    {"M", "<cmd>lua require\"gitsigns\".stage_buffer()<CR>", name = "Stage buffer"},
     {"u", "<cmd>lua require\"gitsigns\".undo_stage_hunk()<CR>", name = "Unstage"},
     {"x", "<cmd>lua require\"gitsigns\".reset_hunk()<CR>", name = "Reset hunk"},
     {"X", "<cmd>lua require\"gitsigns\".reset_buffer()<CR>", name = "Reset buffer"},
@@ -44,14 +51,16 @@ doom.use_keybind({
   {"<leader>t", name = "+tweak", {
     {"b", "<CMD>TransparentToggle<CR>", name = "Toggle Background-Transparent mode"},
   }},
+-- Buffers
+  {"<leader>b", name = "+buffer", {
+    {"D", "<CMD>bf!<CR>", name = "Force Delete"},
+  }},
 -- LSP
   {"<leader>c", name = "+code", {
     {".", "<CMD>Telescope lsp_document_symbols<CR>", name = "Buffer Symbols"},
     {",", "<CMD>Telescope lsp_references<CR>", name = "Symbol References"},
     {"<CR>", "<CMD>lua vim.lsp.buf.code_action()<CR>", name = "Code Actions"},
     {"r", "<CMD>lua vim.lsp.buf.rename()<CR>", name = "Rename"},
-    {"p", "<CMD>lua vim.diagnostic.goto_prev()<CR>", name = "Diagnostic - Prev"},
-    {"n", "<CMD>lua vim.diagnostic.goto_next()<CR>", name = "Diagnostic - Next"},
     {"a", "<CMD>lua vim.lsp.buf.definition()<CR>", name = "GoTo Definition"},
   }},
 })
@@ -100,6 +109,10 @@ doom.use_package({"sbdchd/neoformat", config = function()
         augroup END
     ]]
   end
+})
+
+doom.use_autocmd({
+  { "BufRead,BufEnter", "*.astro", function() vim.cmd[[set filetype=astro]] end}
 })
 
 doom.indent = 2
