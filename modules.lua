@@ -9,19 +9,24 @@
 return {
   ---
   features = {
+    "lsp_coc", -- COC-Nvim
+    "lsp_flutter",
+    "basic_format_on_save",
+    "basic_fterm",
+    "ui_transparent",
     -- Language features
     "annotations", -- Code annotation generator
-    "auto_install", -- Auto install LSP providers
+    -- "auto_install", -- Auto install LSP providers
     "autopairs", -- Automatically close character pairs
     "comment", -- Adds keybinds to comment in any language
-    "linter", -- Linting and formatting for languages
-    "lsp", -- Code completion
-    "extra_snippets", -- Code snippets for all languages
+    -- "linter", -- Linting and formatting for languages
+    -- "lsp", -- Code completion
+    -- "extra_snippets", -- Code snippets for all languages
 
     -- Editor
     "auto_session", -- Remember sessions between loads
     "colorizer", -- Show colors in neovim
-    "editorconfig", -- Support editorconfig files
+    -- "editorconfig", -- Support editorconfig files
     "gitsigns", -- Show git changes in sidebar
     "illuminate", -- Highlight other copies of the word you're hovering on
     "indentlines", -- Show indent lines with special characters
@@ -30,7 +35,7 @@ return {
     "doom_themes",     -- Extra themes for doom
 
     -- UI Components
-    "lsp_progress", -- Check status of LSP loading
+    -- "lsp_progress", -- Check status of LSP loading
     "tabline", -- Tab bar buffer switcher
     "dashboard", -- A pretty dashboard upon opening
     "trouble",         -- A pretty diagnostic viewer
@@ -58,17 +63,17 @@ return {
   },
   langs = {
     -- Scripts
-    "lua",
-    "python",
-    "bash",
-    "fish",
+    -- "lua",
+    -- "python",
+    -- "bash",
+    -- "fish",
 
     -- Web
-    "javascript",
-    "typescript",
-    "css",
+    -- "javascript",
+    -- "typescript",
+    -- "css",
     -- "vue",
-    "tailwindcss",
+    -- "tailwindcss",
 
     -- Compiled
     -- "rust",
@@ -80,10 +85,10 @@ return {
     -- "kotlin",
     -- "java",
 
-    "config",          -- JSON, YAML, TOML
-    "markdown",
+    -- "config",          -- JSON, YAML, TOML
+    -- "markdown",
     -- "terraform",       -- Terraform / hcl files support
-    "dockerfile",
+    -- "dockerfile",
   },
 }
 

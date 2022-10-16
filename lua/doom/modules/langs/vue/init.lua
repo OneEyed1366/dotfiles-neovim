@@ -82,8 +82,9 @@ vue.autocmds = {
 
       local function get_typescript_server_path(root_dir)
         -- Alternative location if installed as root:
-        -- local global_ts = '/usr/local/lib/node_modules/typescript/lib/tsserverlibrary.js'
+        local global_ts = '~/Library/pnpm/global/5/node_modules/typescript/lib/tsserverlibrary.js'
         local found_ts = ""
+
         local function check_dir(path)
           found_ts = lspconfig_util.path.join(
             path,
@@ -92,13 +93,21 @@ vue.autocmds = {
             "lib",
             "tsserverlibrary.js"
           )
+
           if lspconfig_util.path.exists(found_ts) then
             return path
           end
+
         end
+
         if lspconfig_util.search_ancestors(root_dir, check_dir) then
           return found_ts
         end
+
+        if lspconfig_util.path.exists(global_ts) then
+          return global_ts
+        end
+
         return ""
       end
       -- volar needs works with typescript server, needs to get the typescript server from the project's node_modules

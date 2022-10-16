@@ -86,6 +86,7 @@ module.use_lsp = function(lsp_name, options)
   if utils.is_module_enabled("features", "auto_install") and not opts.no_installer then
     local lsp_installer = require("nvim-lsp-installer.servers")
     local server_available, server = lsp_installer.get_server(lsp_name)
+
     if server_available then
       if not server:is_installed() then
         vim.defer_fn(function()
@@ -114,6 +115,7 @@ end
 --- Get LSP capabilities for DOOM
 module.get_capabilities = function()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
+
   capabilities.textDocument.completion.completionItem.preselectSupport = true
   capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
   capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
