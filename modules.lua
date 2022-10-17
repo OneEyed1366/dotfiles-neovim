@@ -9,9 +9,9 @@
 return {
   ---
   features = {
-    -- "lsp_competition_coq", -- TODO: only with "lsp_mason"
-    -- "lsp_mason",
-    "lsp_coc", -- COC-Nvim
+    "lsp_comp_coq", -- TODO: only with "lsp_mason"
+    "lsp_mason",
+    -- "lsp_coc", -- COC-Nvim
     "lsp_flutter",
     "basic_fterm",
     -- "basic_format_on_save",

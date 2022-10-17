@@ -7,13 +7,13 @@ local _lsp_mason_lspconfig_package = "mason-lspconfig"
 
 mason.packages = {
   [_package_name] = {
-    {
-      "williamboman/mason.nvim",
-      requires = {
-        {"williamboman/mason-lspconfig.nvim"},
-        {"neovim/nvim-lspconfig", after = "mason-lspconfig"},
-      }
-    }
+    "williamboman/mason.nvim",
+  },
+  [_lsp_mason_lspconfig_package] = {
+    "williamboman/mason-lspconfig.nvim"
+  },
+  [_lsp_package] = {
+    "neovim/nvim-lspconfig",
   }
 }
 
@@ -22,30 +22,18 @@ mason.configs = {
     require("mason").setup()
   end,
   [_lsp_mason_lspconfig_package] = function()
-    require("mason-lspconfig").setup({
+    local config = require("mason-lspconfig")
+
+    config.setup({
       automatic_installation = true,
     })
+
+    config.setup_handlers {
+      function(server_name) -- default handler (optional)
+          require("lspconfig")[server_name].setup {}
+      end,
+    }
   end,
-  [Global_lsp_auto_install_package] = function()
-    local lsp_installer = require("nvim-lsp-installer")
-    local lspconfig = require("lspconfig")
-
-    lsp_installer.setup {}
-
-    lspconfig.util.default_config = vim.tbl_extend(
-      "force",
-      lspconfig.util.default_config,
-      {
-          on_attach = on_attach
-      }
-    )
-
-    for _, server in ipairs(lsp_installer.get_installed_servers()) do
-      local opts = {}
-
-      lspconfig[server.name].setup(opts)
-    end
-  end
 }
 
 mason.binds = {
@@ -55,7 +43,10 @@ mason.binds = {
   {"[",{
     {"[", "vim.diagnostic.goto_prev", name = "Prev Error"}
   }},
-  {"<leader>c", {
+  {mode = "n", {
+    {"<S-k>", "<CMD>lua vim.lsp.buf.hover()<CR>", name = "Show Definition"}
+  }},
+  {"<leader>c", name = "+code", {
     {".", "<CMD>Telescope lsp_document_symbols<CR>", name = "Buffer Symbols"},
     {",", "<CMD>Telescope lsp_references<CR>", name = "Symbol References"},
     {"r", "<CMD>lua vim.lsp.buf.rename()<CR>", name = "Rename"},
