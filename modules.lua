@@ -9,12 +9,14 @@
 return {
   ---
   features = {
-    "lsp_comp_coq", -- TODO: only with "lsp_mason"
+    -- CUSTOM
+    "lsp_comp_cmp", -- TODO: OR "lsp_comp_coq" OR "lsp_comp_cmp"
+    -- "lsp_comp_coq", -- TODO: only with "lsp_mason"
     "lsp_mason",
-    -- "lsp_coc", -- COC-Nvim
+    -- "lsp_coc", -- TODO: only WITHOUT "lsp_mason" & "lsp_comp_coq"
     "lsp_flutter",
     "basic_fterm",
-    -- "basic_format_on_save",
+    "basic_format_on_save",
     "ui_transparent",
     -- Language features
     "annotations", -- Code annotation generator
@@ -37,7 +39,7 @@ return {
     "doom_themes",     -- Extra themes for doom
 
     -- UI Components
-    -- "lsp_progress", -- Check status of LSP loading
+    "lsp_progress", -- Check status of LSP loading
     "tabline", -- Tab bar buffer switcher
     "dashboard", -- A pretty dashboard upon opening
     "trouble",         -- A pretty diagnostic viewer
