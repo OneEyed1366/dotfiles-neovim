@@ -38,13 +38,13 @@ mason.configs = {
 
 mason.binds = {
   {"]", {
-    {"]", "vim.diagnostic.goto_nex", name = "Next Error"}
+    {"]", "<CMD>lua vim.diagnostic.goto_next()<CR>", name = "Next Error"}
   }},
-  {"[",{
-    {"[", "vim.diagnostic.goto_prev", name = "Prev Error"}
+  {"[", {
+    {"[", "<CMD>lua vim.diagnostic.goto_prev()<CR>", name = "Prev Error"}
   }},
   {mode = "n", {
-    {"<S-k>", "<CMD>lua vim.lsp.buf.hover()<CR>", name = "Show Definition"}
+    {"<S-k>", "<CMD>lua vim.lsp.buf.hover()<CR>", name = "Show Definition"},
   }},
   {"<leader>c", name = "+code", {
     {".", "<CMD>Telescope lsp_document_symbols<CR>", name = "Buffer Symbols"},
