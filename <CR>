@@ -1,14 +1,5 @@
 local lsp_coc = {}
 
-vim.opt.backup = false
-vim.opt.writebackup = false
--- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
--- delays and poor user experience.
-vim.opt.updatetime = 300
--- Always show the signcolumn, otherwise it would shift the text each time
--- diagnostics appear/become resolved.
-vim.opt.signcolumn = "yes"
-
 lsp_coc.packages = {
   ["coc_nvim"] = {
     "neoclide/coc.nvim",
@@ -42,6 +33,14 @@ lsp_coc.binds = {
     {"<CR>", "<Plug>(coc-codeaction-selected)", name = "Code Actions"},
     {"<leader>", "<Plug>(coc-fix-current)", name = "Fix"},
   }}
+}
+
+lsp_coc.autocmds = {
+  {"BufWinEnter", "*", function()
+    if vim.bo.buftype == "" then
+      vim.cmd[[w<CR>]]
+    end
+  end}
 }
 
 return lsp_coc

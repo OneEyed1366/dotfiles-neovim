@@ -11,8 +11,8 @@ return {
   features = {
     "lsp_coc", -- COC-Nvim
     "lsp_flutter",
-    "basic_format_on_save",
     "basic_fterm",
+    -- "basic_format_on_save",
     "ui_transparent",
     -- Language features
     "annotations", -- Code annotation generator
