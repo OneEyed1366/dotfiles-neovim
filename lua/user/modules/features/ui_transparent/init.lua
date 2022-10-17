@@ -23,4 +23,10 @@ transparent.configs["transparent"] = function()
     })
 end
 
+transparent.binds = {
+  {"<leader>t", name = "+tweak", {
+    {"b", "<CMD>TransparentToggle<CR>", name = "Toggle Background-Transparent mode"},
+  }},
+}
+
 return transparent

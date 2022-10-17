@@ -1,23 +1,3 @@
--- doom.features.auto_install.packages.nvim-lsp-installer
--- doom.features.auto_install.configs["nvim-lsp-installer"] = function()
---         local lsp_installer = require("nvim-lsp-installer")
---         local lspconfig = require("lspconfig")
---
---         lsp_installer.setup {}
---
---         lspconfig.util.default_config = vim.tbl_extend(
---             "force",
---             lspconfig.util.default_config,
---             {
---                 on_attach = on_attach
---             }
---         )
---     for _, server in ipairs(require("nvim-lsp-installer").get_installed_servers()) do
---             local opts = {}
---
---             lspconfig[server.name].setup(opts)
---     end
--- end
 doom.use_keybind({
 -- Telescope
   {"<leader><CR>", "<CMD>Telescope commands<CR>", name = "All commands"},
@@ -46,21 +26,10 @@ doom.use_keybind({
     {",", "<cmd>lua require\"gitsigns\".preview_hunk()<CR>", name = "Preview"},
     {"t", "<cmd>lua require\"gitsigns\".blame_line()<CR>", name = "Blame line"},
   }},
--- UI
-  {"<leader>t", name = "+tweak", {
-    {"b", "<CMD>TransparentToggle<CR>", name = "Toggle Background-Transparent mode"},
-  }},
 -- Buffers
   {"<leader>b", name = "+buffer", {
     {"D", "<CMD>bf!<CR>", name = "Force Delete"},
   }},
--- LSP
-  -- {"<leader>c", name = "+code", {
-    
-    -- {"<CR>", "<CMD>lua vim.lsp.buf.code_action()<CR>", name = "Code Actions"},
-  --   {"r", "<CMD>lua vim.lsp.buf.rename()<CR>", name = "Rename"},
-    -- {"a", "<CMD>lua vim.lsp.buf.definition()<CR>", name = "GoTo Definition"},
-  -- }},
 -- Open smth
   {"<leader>o", name = "+open", {
     {"<leader>", "<CMD>terminal<CR>", name = "terminal"},
