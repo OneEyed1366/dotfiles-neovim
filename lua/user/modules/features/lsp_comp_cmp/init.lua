@@ -98,17 +98,20 @@ _settings.configs = {
       })
     })
 
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    local is_cmp_lsp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+    local capabilities = cmp_lsp.default_capabilities()
 
-    mason_lspconfig.setup_handlers {
-      function(server_name) -- default handler (optional)
-        local opts = {
-          capabilities = capabilities
-        }
+    if is_cmp_lsp and capabilities then
+      mason_lspconfig.setup_handlers {
+        function(server_name) -- default handler (optional)
+          local opts = {
+            capabilities = capabilities
+          }
 
-        require("lspconfig")[server_name].setup(opts)
-      end,
-    }
+          require("lspconfig")[server_name].setup(opts)
+        end,
+      }
+    end
   end
 }
 
