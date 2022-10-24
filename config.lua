@@ -24,7 +24,7 @@ doom.use_keybind({
     {"x", "<cmd>lua require\"gitsigns\".reset_hunk()<CR>", name = "Reset hunk"},
     {"X", "<cmd>lua require\"gitsigns\".reset_buffer()<CR>", name = "Reset buffer"},
     {",", "<cmd>lua require\"gitsigns\".preview_hunk()<CR>", name = "Preview"},
-    {"t", "<cmd>lua require\"gitsigns\".blame_line()<CR>", name = "Blame line"},
+    {"B", "<cmd>Telescope git_branches<CR>", name = "Branches"},
   }},
 -- Buffers
   {"<leader>b", name = "+buffer", {
