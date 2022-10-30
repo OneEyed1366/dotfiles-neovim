@@ -61,13 +61,6 @@ _settings.configs = {
       path = "[Path]",
     }
 
-    --- Helper function to check what <Tab> behaviour to use
-    --- @return boolean
-    local function check_backspace()
-      local col = vim.fn.col(".") - 1
-      return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
-    end
-
     -- Initalize the cmp toggle if it doesn't exist.
     if _doom.cmp_enable == nil then
       _doom.cmp_enable = true
@@ -99,7 +92,7 @@ _settings.configs = {
     })
 
     local is_cmp_lsp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
-    local capabilities = cmp_lsp.default_capabilities()
+    local capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
     if is_cmp_lsp and capabilities then
       mason_lspconfig.setup_handlers {
