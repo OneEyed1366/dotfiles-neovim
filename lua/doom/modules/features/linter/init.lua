@@ -22,6 +22,26 @@ linter.configs = {}
 linter.configs["null-ls.nvim"] = function()
   local null_ls = require("null-ls")
   local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+  local lsp_formatting = function(bufnr)
+    if type(vim.lsp.buf.format) == "function" then
+      vim.lsp.buf.format({
+        bufnr = bufnr,
+        timeout_ms = linter.settings.default_timeout,
+        filter = function(client)
+            return client.name == "null-ls"
+        end,
+      })
+    else
+      vim.lsp.buf.formatting_sync(nil, linter.settings.default_timeout)
+    end
+      -- vim.lsp.buf.format({
+      --     filter = function(client)
+      --         return client.name == "null-ls"
+      --     end,
+      --     bufnr = bufnr,
+      -- })
+  end
+  
 
   null_ls.setup({
     sources = {
@@ -47,34 +67,26 @@ linter.configs["null-ls.nvim"] = function()
     -- you can reuse a shared lspconfig on_attach callback here
     on_attach = function(client, bufnr)
       if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          group = augroup,
-      
-          callback = function()
-              -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-            vim.lsp.buf.formatting_sync()
-          end,
-        })
-      end
+            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                group = augroup,
+                buffer = bufnr,
+                callback = function()
+                  if type(vim.lsp.buf.format) == "function" then
+                    vim.lsp.buf.format({
+                      bufnr = bufnr, 
+                      filter = function(filter_client)
+                          return filter_client.name == "null-ls"
+                      end,
+                    })
+                  else
+                    vim.lsp.buf.formatting_sync(nil, 2000)
+                  end
+                end,
+            })
+        end
     end,
   })
-  -- local null_ls_settings = doom.features.linter.settings.null_ls_settings
-  -- null_ls.setup(vim.tbl_deep_extend("force", null_ls_settings, {
-  --   on_attach = function(client)
-  --     if
-  --       client.server_capabilities.documentFormattingProvider
-  --       and doom.features.linter.settings.format_on_save
-  --     then
-  --       vim.cmd([[
-  --       augroup LspFormatting
-  --         autocmd! * <buffer>
-  --         autocmd BufWritePre <buffer> lua type(vim.lsp.buf.format) == "function" and vim.lsp.buf.format() or vim.lsp.buf.formatting_sync()
-  --       augroup END
-  --       ]])
-  --     end
-  --   end,
-  -- }))
 end
 
 linter.binds = {
