@@ -10,6 +10,8 @@ return {
   ---
   features = {
     -- CUSTOM
+    "ui_window_resizings",
+    -- "lsp_sqls",
     "lsp_comp_cmp", -- TODO: OR "lsp_comp_coq" OR "lsp_comp_cmp"
     -- "lsp_comp_coq", -- TODO: only with "lsp_mason"
     "lsp_mason",

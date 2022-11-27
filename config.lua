@@ -28,7 +28,7 @@ doom.use_keybind({
   }},
 -- Buffers
   {"<leader>b", name = "+buffer", {
-    {"D", "<CMD>bf!<CR>", name = "Force Delete"},
+    {"D", "<CMD>bdelete!<CR>", name = "Force Delete"},
   }},
 -- Open smth
   {"<leader>o", name = "+open", {
@@ -42,3 +42,4 @@ doom.use_autocmd({
 })
 
 doom.indent = 2
+doom.colorscheme = "doom-palenight"
