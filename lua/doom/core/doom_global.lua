@@ -199,7 +199,7 @@ doom = {
     cursor_coloring = false,
     -- If TreeSitter highlighting should be enabled
     -- @default = true
-    enable_treesitter = true,
+    enable_treesitter = false,
     -- If the comments should be italic
     -- @default = false
     italic_comments = false,
