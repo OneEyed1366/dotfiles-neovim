@@ -340,13 +340,6 @@ lsp.binds = function()
           "c",
           name = "+code",
           {
-            { "r", vim.lsp.buf.rename, name = "Rename" },
-            { "a", vim.lsp.buf.code_action, name = "Do action" },
-            { "t", vim.lsp.buf.type_definition, name = "Jump to type" },
-            { "D", vim.lsp.buf.declaration, "Jump to declaration" },
-            { "d", vim.lsp.buf.definition, name = "Jump to definition" },
-            { "R", vim.lsp.buf.references, name = "Jump to references" },
-            { "i", vim.lsp.buf.implementation, name = "Jump to implementation" },
             {
               "l",
               name = "+lsp",
