@@ -2,12 +2,18 @@ local telescope = {}
 
 telescope.settings = {
   defaults = {
+    pickers = {
+      find_files = {
+        hidden = true,
+      },
+    },
     find_command = {
       "rg",
+      "--hidden",
+      "--column",
       "--no-heading",
       "--with-filename",
       "--line-number",
-      "--column",
       "--smart-case",
     },
     initial_mode = "insert",
@@ -179,10 +185,10 @@ telescope.binds = function()
   }
   if is_module_enabled("features", "lsp") then
     table.insert(binds[2], {
+      {
+        "c",
+        name = "+code",
         {
-          "c",
-          name = "+code",
-          {
           { "s", "<cmd>Telescope lsp_document_symbols<CR>", name = "Lsp symbols", remap = true },
         },
       },

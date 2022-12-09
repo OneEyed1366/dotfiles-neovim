@@ -9,8 +9,9 @@
 return {
   features = {
     -- User
+    "terminal_floaterm",
     "keys_custom",
-    "basic_fterm",
+    -- "basic_fterm",
     -- "basic_format_on_save",
     "ui_transparent",
     "ui_window_resizing",
@@ -32,7 +33,7 @@ return {
     "indentlines", -- Show indent lines with special characters
     "range_highlight", -- Highlight selected range from commands
     "todo_comments", -- Highlight TODO: comments
-    "doom_themes",     -- Extra themes for doom
+    "doom_themes", -- Extra themes for doom
 
     -- UI Components
     "lsp_progress", -- Check status of LSP loading
@@ -42,7 +43,7 @@ return {
     "statusline", -- A pretty status line at the bottom of the buffer
     -- "minimap",         -- Shows current position in document
     -- "terminal",        -- Integrated terminal in neovim
-    "symbols",         -- Navigate between code symbols using telescope
+    "symbols", -- Navigate between code symbols using telescope
     -- "ranger",          -- File explorer in neovim (TODO: Test)
     -- "restclient",      -- Test HTTP requests from neovim (TODO: Test)
     -- "show_registers",  -- Show and navigate between registers
