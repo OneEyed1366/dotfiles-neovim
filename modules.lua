@@ -9,6 +9,7 @@
 return {
   features = {
     -- User
+    "lsp_coc",
     "terminal_floaterm",
     "keys_custom",
     -- "basic_fterm",
@@ -20,9 +21,9 @@ return {
     "auto_install", -- Auto install LSP providers
     "autopairs", -- Automatically close character pairs
     "comment", -- Adds keybinds to comment in any language
-    "linter", -- Linting and formatting for languages
-    "lsp", -- Code completion
-    "extra_snippets", -- Code snippets for all languages
+    -- "linter", -- Linting and formatting for languages
+    -- "lsp", -- Code completion
+    -- "extra_snippets", -- Code snippets for all languages
 
     -- Editor
     "auto_session", -- Remember sessions between loads
@@ -36,7 +37,7 @@ return {
     "doom_themes", -- Extra themes for doom
 
     -- UI Components
-    "lsp_progress", -- Check status of LSP loading
+    -- "lsp_progress", -- Check status of LSP loading
     "tabline", -- Tab bar buffer switcher
     "dashboard", -- A pretty dashboard upon opening
     -- "trouble",         -- A pretty diagnostic viewer
@@ -50,12 +51,12 @@ return {
 
     -- Tools
     -- "dap",             -- Debug code through neovim
-    "repl", -- Interactive REPL in neovim
+    -- "repl", -- Interactive REPL in neovim
     "explorer", -- An enhanced filetree explorer
     -- "firenvim",        -- Embed neovim in your browser
     -- "lazygit",         -- Lazy git integration
     -- "neogit",          -- A git client for neovim
-    "neorg", -- Organise your life
+    -- "neorg", -- Organise your life
     "projects", -- Quickly switch between projects
     -- "superman",        -- Read unix man pages in neovim
     -- "suda",            -- Save using sudo when necessary
@@ -64,22 +65,22 @@ return {
   },
   langs = {
     -- Scripts
-    "lua",
-    "python",
-    "bash",
-    "fish",
+    -- "lua",
+    -- "python",
+    -- "bash",
+    -- "fish",
     -- "gdscript",
     -- "gdscript",
     -- "php",
     -- "ruby",
 
     -- Web
-    "javascript",
-    "typescript",
-    "css",
-    "vue",
-    "tailwindcss",
-    "svelte",
+    -- "javascript",
+    -- "typescript",
+    -- "css",
+    -- "vue",
+    -- "tailwindcss",
+    -- "svelte",
 
     -- Compiled
     -- "rust",
@@ -92,12 +93,12 @@ return {
     -- "kotlin",
     -- "java",
 
-    "json",
-    "yaml",
-    "toml",
-    "markdown",
+    -- "json",
+    -- "yaml",
+    -- "toml",
+    -- "markdown",
     -- "terraform",       -- Terraform / hcl files support
-    "dockerfile",
+    -- "dockerfile",
     -- "nix",             -- Nix declarations
   },
 }

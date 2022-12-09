@@ -1,0 +1,4 @@
+{
+  "eslint.autoFixOnSave": true
+  "volar.autoClosingTags": true
+}
