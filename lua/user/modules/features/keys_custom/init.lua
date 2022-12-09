@@ -13,29 +13,29 @@ _module.binds = {
     },
   },
   -- LSP
-  { "]", {
-    { "]", "<CMD>lua vim.diagnostic.goto_next()<CR>", name = "Next Error" },
-  } },
-  { "[", {
-    { "[", "<CMD>lua vim.diagnostic.goto_prev()<CR>", name = "Prev Error" },
-  } },
-  {
-    mode = "n",
-    {
-      { "<S-k>", "<CMD>lua vim.lsp.buf.hover()<CR>", name = "Show Definition" },
-    },
-  },
-  {
-    "<leader>c",
-    name = "+code",
-    {
-      { ".", "<CMD>Telescope lsp_document_symbols<CR>", name = "Buffer Symbols" },
-      { ",", "<CMD>Telescope lsp_references<CR>", name = "Symbol References" },
-      { "r", "<CMD>lua vim.lsp.buf.rename()<CR>", name = "Rename" },
-      { "a", "<CMD>lua vim.lsp.buf.definition()<CR>", name = "GoTo Definition" },
-      { "<CR>", "<CMD>lua vim.lsp.buf.code_action()<CR>", name = "Code Actions" },
-    },
-  },
+  -- { "]", {
+  --   { "]", "<CMD>lua vim.diagnostic.goto_next()<CR>", name = "Next Error" },
+  -- } },
+  -- { "[", {
+  --   { "[", "<CMD>lua vim.diagnostic.goto_prev()<CR>", name = "Prev Error" },
+  -- } },
+  -- {
+  --   mode = "n",
+  --   {
+  --     { "<S-k>", "<CMD>lua vim.lsp.buf.hover()<CR>", name = "Show Definition" },
+  --   },
+  -- },
+  -- {
+  --   "<leader>c",
+  --   name = "+code",
+  --   {
+  --     { ".", "<CMD>Telescope lsp_document_symbols<CR>", name = "Buffer Symbols" },
+  --     { ",", "<CMD>Telescope lsp_references<CR>", name = "Symbol References" },
+  --     { "r", "<CMD>lua vim.lsp.buf.rename()<CR>", name = "Rename" },
+  --     { "a", "<CMD>lua vim.lsp.buf.definition()<CR>", name = "GoTo Definition" },
+  --     { "<CR>", "<CMD>lua vim.lsp.buf.code_action()<CR>", name = "Code Actions" },
+  --   },
+  -- },
   -- Telescope
   { "<leader><CR>", "<CMD>Telescope commands<CR>", name = "All commands" },
   -- FS

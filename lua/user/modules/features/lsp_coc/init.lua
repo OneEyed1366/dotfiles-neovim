@@ -27,12 +27,7 @@ lsp_coc.binds = {
       { "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>"]], },
     },
   },
-  {
-    mode = "n",
-    {
-      { "<S-k>", "<CMD>call CocAction('definitionHover')<CR>", name = "Show Definition" },
-    },
-  },
+  { "<S-k>", "<CMD>call CocAction('definitionHover')<CR>", name = "Show Definition" },
   { "]", {
     { "]", "<Plug>(coc-diagnostic-next)", name = "Next Error" },
   } },
