@@ -22,9 +22,9 @@ lsp_coc.binds = {
     mode = "i",
     options = { silent = true, expr = true, noremap = true, replace_keycodes = false },
     {
-      -- { "<TAB>", [[coc#pum#visible() ? coc#pum#next(1) : "\<C-i>"]] },
-      -- { "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]] },
-      { "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>"]], },
+      { "<TAB>", [[coc#pum#visible() ? coc#pum#next(1) : "\<C-i>"]] },
+      { "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]] },
+      { "<Leader>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>"]], },
     },
   },
   { "<S-k>", "<CMD>call CocAction('definitionHover')<CR>", name = "Show Definition" },
