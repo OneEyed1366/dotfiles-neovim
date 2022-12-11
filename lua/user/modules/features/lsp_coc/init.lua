@@ -16,7 +16,6 @@ lsp_coc.packages = {
   },
 }
 
-
 lsp_coc.binds = {
   {
     mode = "i",
@@ -24,7 +23,7 @@ lsp_coc.binds = {
     {
       { "<TAB>", [[coc#pum#visible() ? coc#pum#next(1) : "\<C-i>"]] },
       { "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]] },
-      { "<Leader>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>"]], },
+      { "<Leader>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<Leader>"]], },
     },
   },
   { "<S-k>", "<CMD>call CocAction('definitionHover')<CR>", name = "Show Definition" },
