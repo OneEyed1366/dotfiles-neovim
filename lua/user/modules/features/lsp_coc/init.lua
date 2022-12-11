@@ -23,7 +23,7 @@ lsp_coc.binds = {
     {
       { "<TAB>", [[coc#pum#visible() ? coc#pum#next(1) : "\<C-i>"]] },
       { "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]] },
-      { "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>"]], },
+      { "<S-CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<S-CR>"]], },
     },
   },
   { "<S-k>", "<CMD>call CocAction('definitionHover')<CR>", name = "Show Definition" },
