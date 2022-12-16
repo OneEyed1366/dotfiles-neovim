@@ -9,7 +9,7 @@
 return {
   features = {
     -- User
-    "lsp_coc",
+    -- "lsp_coc",
     "terminal_floaterm",
     "keys_custom",
     -- "basic_fterm",
@@ -21,8 +21,8 @@ return {
     "auto_install", -- Auto install LSP providers
     "autopairs", -- Automatically close character pairs
     "comment", -- Adds keybinds to comment in any language
-    -- "linter", -- Linting and formatting for languages
-    -- "lsp", -- Code completion
+    "linter", -- Linting and formatting for languages
+    "lsp", -- Code completion
     -- "extra_snippets", -- Code snippets for all languages
 
     -- Editor
@@ -37,7 +37,7 @@ return {
     "doom_themes", -- Extra themes for doom
 
     -- UI Components
-    -- "lsp_progress", -- Check status of LSP loading
+    "lsp_progress", -- Check status of LSP loading
     "tabline", -- Tab bar buffer switcher
     "dashboard", -- A pretty dashboard upon opening
     -- "trouble",         -- A pretty diagnostic viewer
@@ -65,22 +65,22 @@ return {
   },
   langs = {
     -- Scripts
-    -- "lua",
-    -- "python",
+    "lua",
+    "python",
     -- "bash",
-    -- "fish",
+    "fish",
     -- "gdscript",
     -- "gdscript",
-    -- "php",
+    "php",
     -- "ruby",
 
     -- Web
-    -- "javascript",
-    -- "typescript",
-    -- "css",
-    -- "vue",
-    -- "tailwindcss",
-    -- "svelte",
+    "javascript",
+    "typescript",
+    "css",
+    "vue",
+    "tailwindcss",
+    "svelte",
 
     -- Compiled
     -- "rust",
@@ -93,13 +93,13 @@ return {
     -- "kotlin",
     -- "java",
 
-    -- "json",
-    -- "yaml",
-    -- "toml",
-    -- "markdown",
+    "json",
+    "yaml",
+    "toml",
+    "markdown",
     -- "terraform",       -- Terraform / hcl files support
-    -- "dockerfile",
-    -- "nix",             -- Nix declarations
+    "dockerfile",
+    "nix",             -- Nix declarations
   },
 }
 
