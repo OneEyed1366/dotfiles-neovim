@@ -11,22 +11,22 @@ _module.binds = {
   {
     mode = "t",
     {
-      { "<Space>`<Space>", "<CMD>FloatermToggle<CR>", name = "Toggle termial" },
-      { "<Space>`o", "<CMD>FloatermNew<CR>", name = "Open new terminal" },
-      { "<Space>`l", "<CMD>FloatermNext<CR>", name = "Next terminal" },
-      { "<Space>`g", "<CMD>FloatermNew lazygit<CR>", name = "Terminal - lazygit" },
-      { "<Space>`b", "<CMD>FloatermKill<CR>", name = "Close terminal" },
+      { "<Space>§<Space>", "<CMD>FloatermToggle<CR>", name = "Toggle termial" },
+      { "<Space>§o", "<CMD>FloatermNew<CR>", name = "Open new terminal" },
+      { "<Space>§l", "<CMD>FloatermNext<CR>", name = "Next terminal" },
+      { "<Space>§g", "<CMD>FloatermNew lazygit<CR>", name = "Terminal - lazygit" },
+      { "<Space>§b", "<CMD>FloatermKill<CR>", name = "Close terminal" },
     },
   },
   {
     mode = "n",
     {
-      { "<Space>`<Space>", "<CMD>FloatermToggle<CR>", name = "Toggle termial" },
-      { "<Space>`o", "<CMD>FloatermNew<CR>", name = "Open new terminal" },
-      { "<Space>`l", "<CMD>FloatermNext<CR>", name = "Next terminal" },
-      { "<Space>`h", "<CMD>FloatermPrev<CR>", name = "Prev terminal" },
-      { "<Space>`g", "<CMD>FloatermNew lazygit<CR>", name = "Terminal - lazygit" },
-      { "<Space>`b", "<CMD>FloatermKill<CR>", name = "Close terminal" },
+      { "<Space>§<Space>", "<CMD>FloatermToggle<CR>", name = "Toggle termial" },
+      { "<Space>§o", "<CMD>FloatermNew<CR>", name = "Open new terminal" },
+      { "<Space>§l", "<CMD>FloatermNext<CR>", name = "Next terminal" },
+      { "<Space>§h", "<CMD>FloatermPrev<CR>", name = "Prev terminal" },
+      { "<Space>§g", "<CMD>FloatermNew lazygit<CR>", name = "Terminal - lazygit" },
+      { "<Space>§b", "<CMD>FloatermKill<CR>", name = "Close terminal" },
     },
   },
 }

@@ -13,7 +13,7 @@ return {
     "terminal_floaterm",
     "keys_custom",
     -- "basic_fterm",
-    -- "basic_format_on_save",
+    "basic_format_on_save",
     "ui_transparent",
     "ui_window_resizing",
     -- Language features
@@ -21,7 +21,7 @@ return {
     "auto_install", -- Auto install LSP providers
     "autopairs", -- Automatically close character pairs
     "comment", -- Adds keybinds to comment in any language
-    "linter", -- Linting and formatting for languages
+    -- "linter", -- Linting and formatting for languages
     "lsp", -- Code completion
     -- "extra_snippets", -- Code snippets for all languages
 
@@ -99,7 +99,7 @@ return {
     "markdown",
     -- "terraform",       -- Terraform / hcl files support
     "dockerfile",
-    "nix",             -- Nix declarations
+    "nix", -- Nix declarations
   },
 }
 
