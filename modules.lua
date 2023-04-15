@@ -9,6 +9,8 @@
 return {
   features = {
     -- User
+    "chat_gpt",
+    -- "fs_nnn",
     -- "lsp_coc",
     "terminal_floaterm",
     "keys_custom",
