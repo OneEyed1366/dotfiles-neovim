@@ -1,3 +1,32 @@
+function! s:vscodeFormat(...) abort
+    if !a:0
+        let &operatorfunc = matchstr(expand('<sfile>'), '[^. ]*$')
+        return 'g@'
+    elseif a:0 > 1
+        let [line1, line2] = [a:1, a:2]
+    else
+        let [line1, line2] = [line("'["), line("']")]
+    endif
+
+    call VSCodeCallRange('editor.action.formatSelection', line1, line2, 0)
+endfunction
+
+function! s:vscodeCommentary(...) abort
+    if !a:0
+        let &operatorfunc = matchstr(expand('<sfile>'), '[^. ]*$')
+        return 'g@'
+    elseif a:0 > 1
+        let [line1, line2] = [a:1, a:2]
+    else
+        let [line1, line2] = [line("'["), line("']")]
+    endif
+
+    call VSCodeCallRange('editor.action.commentLine', line1, line2, 0)
+endfunction
+
+
+command! -range -bar VSCodeCommentary call s:vscodeCommentary(<line1>, <line2>)
+
 function! s:splitDown() abort
   call VSCodeNotify('workbench.action.splitEditorDown')
   call VSCodeNotify('workbench.action.navigateDown')
@@ -36,8 +65,8 @@ nnoremap <leader>wk <CMD>call VSCodeNotify('workbench.action.navigateUp')<CR>
 nnoremap <leader>wj <CMD>call VSCodeNotify('workbench.action.navigateDown')<CR>
 nnoremap <leader>wh <CMD>call VSCodeNotify('workbench.action.navigateLeft')<CR>
 
-nnoremap <leader>w\ splitRight()
-nnoremap <leader>w- splitDown()
+nnoremap <leader>w\ <CMD>call splitRight()<CR>
+nnoremap <leader>w- <CRD>call splitDown()<CR>
 
 nnoremap K <Cmd>call VSCodeNotify('editor.action.showHover')<CR>
 nnoremap <Enter> <CMD>call VSCodeNotify('editor.action.quickFix')<CR>
