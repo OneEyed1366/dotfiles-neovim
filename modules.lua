@@ -9,7 +9,9 @@
 return {
   features = {
     -- User
-    "chat_gpt",
+    "jb_virtual_types",
+    "flutter",
+    -- "chat_gpt",
     -- "fs_nnn",
     -- "lsp_coc",
     "terminal_floaterm",
@@ -52,7 +54,7 @@ return {
     -- "show_registers",  -- Show and navigate between registers
 
     -- Tools
-    -- "dap",             -- Debug code through neovim
+    "dap", -- Debug code through neovim
     -- "repl", -- Interactive REPL in neovim
     "explorer", -- An enhanced filetree explorer
     -- "firenvim",        -- Embed neovim in your browser
