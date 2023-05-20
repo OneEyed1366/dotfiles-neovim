@@ -1,6 +1,5 @@
 " Set global flag to allow checking in custom user config
 let mapleader = "\<Space>"
-let g:vscode = 1
 
 let s:currDir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 " Adjust rtp path

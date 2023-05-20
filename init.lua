@@ -1,6 +1,6 @@
-vim.g.vscode=1;
 vim.g.mapleader = "/<Space>"
-if vim.g.vscode then
+if vim.g.vscode_channel then
+  vim.b.vscode = 1
   local dir = vim.fn.fnamemodify(vim.fn.resolve(vim.fn.expand('<sfile>:p')), ':h')
   vim.cmd('source ' .. dir .. '/lua/vscode/init.vim')
 else
