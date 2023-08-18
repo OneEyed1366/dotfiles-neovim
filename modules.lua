@@ -9,11 +9,16 @@
 return {
   features = {
     -- User
-    "jb_virtual_types",
+    -- "jb_virtual_types",
     "flutter",
+    -- "lsp_ale",
     -- "chat_gpt",
     -- "fs_nnn",
+    -- "lsp_ddc",
+    -- "lsp_null-ls",
     -- "lsp_coc",
+    -- "lsp_easycomplete",
+    -- "lsp_comp_coq",
     "terminal_floaterm",
     "keys_custom",
     -- "basic_fterm",
@@ -54,7 +59,7 @@ return {
     -- "show_registers",  -- Show and navigate between registers
 
     -- Tools
-    "dap", -- Debug code through neovim
+    -- "dap",             -- Debug code through neovim
     -- "repl", -- Interactive REPL in neovim
     "explorer", -- An enhanced filetree explorer
     -- "firenvim",        -- Embed neovim in your browser
@@ -72,38 +77,38 @@ return {
     "lua",
     "python",
     -- "bash",
-    "fish",
-    -- "gdscript",
-    -- "gdscript",
-    "php",
-    -- "ruby",
-
-    -- Web
+    -- "fish",
+    -- -- "gdscript",
+    -- -- "gdscript",
+    -- "php",
+    -- -- "ruby",
+    --
+    -- -- Web
     "javascript",
     "typescript",
     "css",
     "vue",
     "tailwindcss",
     "svelte",
-
-    -- Compiled
-    -- "rust",
-    -- "cc",
-    -- "ocaml",
-    -- "haskell",
-
-    -- JIT
-    -- "c_sharp",
-    -- "kotlin",
-    -- "java",
-
+    --
+    -- -- Compiled
+    -- -- "rust",
+    -- -- "cc",
+    -- -- "ocaml",
+    -- -- "haskell",
+    --
+    -- -- JIT
+    -- -- "c_sharp",
+    -- -- "kotlin",
+    -- -- "java",
+    --
     "json",
     "yaml",
-    "toml",
+    -- "toml",
     "markdown",
-    -- "terraform",       -- Terraform / hcl files support
+    -- -- "terraform",       -- Terraform / hcl files support
     "dockerfile",
-    "nix", -- Nix declarations
+    -- "nix", -- Nix declarations
   },
 }
 

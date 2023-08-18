@@ -1,4 +1,5 @@
 {
   "eslint.autoFixOnSave": true,
-  "volar.autoClosingTags": true
+  "volar.autoClosingTags": true,
+  "suggest.timeout": 5000
 }

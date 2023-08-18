@@ -314,10 +314,10 @@ lsp.binds = function()
     { "K", vim.lsp.buf.hover, name = "Show hover doc" },
     { "]", {
       { "]", "<CMD>lua vim.diagnostic.goto_next()<CR>", name = "Next Error" },
-    }},
+    } },
     { "[", {
       { "[", "<CMD>lua vim.diagnostic.goto_prev()<CR>", name = "Prev Error" },
-    }},
+    } },
     {
       "g",
       {

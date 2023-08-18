@@ -21,7 +21,7 @@ vue.settings = {
   disable_lsp = false,
   --- Name of the language server
   --- @type string
-  lsp_name = "tsserver",
+  lsp_name = "vue-langage-server",
 
   --- Disables null-ls formatting sources
   --- @type boolean

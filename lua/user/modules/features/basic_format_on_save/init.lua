@@ -2,13 +2,13 @@ local neoformat = {}
 
 neoformat.packages = {
   ["neoformat"] = {
-    "sbdchd/neoformat"
-  }
+    "sbdchd/neoformat",
+  },
 }
 
 neoformat.configs = {
   ["neoformat"] = function()
-    vim.cmd[[
+    vim.cmd([[
       let g:neoformat_run_all_formatters = 1
       let g:neoformat_try_node_exe = 0
       let g:neoformat_enables_html = ['prettier']
@@ -38,8 +38,8 @@ neoformat.configs = {
           autocmd!
           autocmd BufWritePre * undojoin | Neoformat
       augroup END
-    ]]
-  end
+    ]])
+  end,
 }
 
 return neoformat
