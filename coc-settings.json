@@ -1,0 +1,35 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "coc.source.file.trimSameExts": [".js", ".jsx", ".ts", ".tsx"],
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true
+  },
+  "symbols.exclude": {
+    "**/node_modules": true,
+    "**/.git": true
+  },
+  "suggest.virtualText": true,
+  "colors.enable": true,
+  "languageserver": {
+    "sql": {
+      "module": "/Users/oneeyed1366/.volta/bin/sql-language-server/dist/bin/cli.js",
+      "args": ["up", "--method", "node-ipc"],
+      "filetypes": ["sql", "mysql"]
+    },
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      "filetypes": ["typescript", "typescriptreact", "graphql"]
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    }
+  }
+}
