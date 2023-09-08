@@ -24,12 +24,17 @@ return {
 
     wk.register({
       ["<leader>"] = {
+        ["r<cr>"] = { "<CMD>call VSCodeNotify('workbench.action.reloadWindow')<CR>", "Reload window" },
         ["/"] = { "<CMD>call VSCodeNotify('workbench.action.findInFiles')<CR>", "Search for string in files" },
         [","] = { "<CMD>call VSCodeNotify('workbench.action.showEditorsInActiveGroup')<cr>", "List open buffers" },
         ["<CR>"] = { "<CMD>call VSCodeNotify('workbench.action.showCommands')<CR>", "Commands" },
         ["m"] = { "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>", "Save" },
-        ["<Tab>"] = { "<CMD>call VSCodeNotify('workbench.action.nextEditorGroup')<CR>", "Jump to next tab" },
-        ["<S-Tab>"] = { "<CMD>call VSCodeNotify('workbench.action.previousEditorGroup')<CR>", "Jump to previous tab" },
+        ["l"] = { "<CMD>call VSCodeNotify('workbench.action.showNextWindowTab')<CR>", "Next window" },
+        ["h"] = { "<CMD>call VSCodeNotify('workbench.action.showPreviousWindowTab')<CR>", "Previous window" },
+        ["k"] = { "<CMD>call VSCodeNotify('projectManager.listProjectsNewWindow')<CR>", "Open project in new window" },
+        ["K"] = { "<CMD>call VSCodeNotify('workbench.action.newWindow')<CR>", "New VSCode instance" },
+        ["<Tab>"] = { "<CMD>call VSCodeNotify('workbench.action.nextEditor')<CR>", "Jump to next tab" },
+        ["<S-Tab>"] = { "<CMD>call VSCodeNotify('workbench.action.previousEditor')<CR>", "Jump to previous tab" },
         o = {
           ["t"] = { "<CMD>call VSCodeNotify('workbench.action.files.newUntitledFile')<CR>", "Open new tab" }
         },
@@ -38,7 +43,7 @@ return {
         },
         b = {
           name = "+buffer",
-          ["d"] = { "<CMD>call VSCodeNotify('workbench.action.files.close')<CR>", "Delete" }
+          ["d"] = { "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>", "Close editor" }
         },
         q = {
           name = "+quit",
@@ -46,9 +51,9 @@ return {
         },
         w = {
           name = "+window",
-          ["d"] = { "<CMD>call VSCodeNotify('workbench.action.closeWindow')<CR>", "Close window" },
-          ["\\"] = { "<CMD>call VSCodeNotify('workbench.action.splitEditorOrthogonal')<CR>", "Split vertical" },
-          ["-"] = { "<CMD>call VSCodeNotify('workbench.action.splitEditor')<CR>", "Split horizontal" },
+          ["d"] = { "<CMD>call VSCodeNotify('workbench.action.closeEditorsAndGroup')<CR>", "Close window" },
+          ["\\"] = { "<CMD>call VSCodeNotify('workbench.action.splitEditor')<CR>", "Split horizontal" },
+          ["-"] = { "<CMD>call VSCodeNotify('workbench.action.splitEditorOrthogonal')<CR>", "Split vertical" },
           ["k"] = { "<CMD>call VSCodeNotify('workbench.action.navigateUp')<CR>", "Go to up window" },
           ["l"] = { "<CMD>call VSCodeNotify('workbench.action.navigateRight')<CR>", "Go to right window" },
           ["j"] = { "<CMD>call VSCodeNotify('workbench.action.navigateDown')<CR>", "Go to bottom window" },
