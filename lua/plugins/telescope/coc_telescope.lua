@@ -77,13 +77,13 @@ return {
                 {
                         mode = "n",
                         "<leader>gu",
-                        "CocCommand git.chunkUndo",
+                        "<CMD>CocCommand git.chunkUndo<CR>",
                         "COC Git Undo",
                 },
                 {
                         mode = "n",
                         "<leader>gm",
-                        "CocCommand git.chunkStage",
+                        "<CMD>CocCommand git.chunkStage<CR>",
                         "COC Git Stage",
                 },
                 {

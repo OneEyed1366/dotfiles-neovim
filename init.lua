@@ -24,6 +24,7 @@ else
   -- local neo_tree = require("plugins.neo-tree")
   local which_key = require("plugins.whichkey")
   local mason = require("plugins.mason")
+  local scope = require("plugins.scope")
   local telescope = require("plugins.telescope")
   local coc_telescope = require("plugins.telescope.coc_telescope")
   local docker_telescope = require("plugins.telescope.docker_telescope")
@@ -40,8 +41,14 @@ else
   local dap = require("plugins.dap")
   local floaterm = require("plugins.terminal")
   local auto_session = require("plugins.auto-session")
+  local twilight = require("plugins.twilight")
+  local context_vt = require("plugins.context_vt")
+  local usages = require("plugins.usages")
 
   require("lazy").setup({
+    usages,
+    context_vt,
+    twilight,
     auto_session,
     which_key,
     mason,
@@ -59,6 +66,7 @@ else
     window_transparent,
     dap,
     floaterm,
+    scope,
     -- format_on_save,
   }, {})
 end
