@@ -22,13 +22,18 @@ if vim.g.vscode then
   }, {})
 else
   -- local neo_tree = require("plugins.neo-tree")
+  local wtf = require("plugins.wtf")
   local which_key = require("plugins.whichkey")
   local mason = require("plugins.mason")
+  local cmp = require("plugins.cmp")
+  local lspconfig = require("plugins.lspconfig")
+  local lspsaga = require("plugins.lspsaga")
   local scope = require("plugins.scope")
   local telescope = require("plugins.telescope")
-  local coc_telescope = require("plugins.telescope.coc_telescope")
+  -- local coc_telescope = require("plugins.telescope.coc_telescope")
   local docker_telescope = require("plugins.telescope.docker_telescope")
   local dap_telescope = require("plugins.telescope.dap_telescope")
+  local git_telescope = require("plugins.telescope.git_advanced-search_telescope")
   local colorschemes = require("plugins.colorschemes")
   local signify = require("plugins.signify")
   local treesittier = require("plugins.treesettier")
@@ -44,17 +49,26 @@ else
   local twilight = require("plugins.twilight")
   local context_vt = require("plugins.context_vt")
   local usages = require("plugins.usages")
+  local chat_gpt = require("plugins.chat-gpt")
+  local git = require("plugins.git")
 
   require("lazy").setup({
+    git,
+    wtf,
+    git_telescope,
+    chat_gpt,
+    lspsaga,
     usages,
     context_vt,
     twilight,
     auto_session,
     which_key,
     mason,
+    cmp,
+    lspconfig,
     telescope,
     dap_telescope,
-    coc_telescope,
+    -- coc_telescope,
     docker_telescope,
     colorschemes,
     signify,
