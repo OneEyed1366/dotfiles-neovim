@@ -25,7 +25,7 @@ return {
                                         delete_session = { "<leader>ad" },
                                         draft_message = { "<leader>a<cr>" },
                                         edit_message = { "<leader>ae" },
-                                        delete_message = {"<leader>ad" },
+                                        delete_message = { "<leader>ad" },
                                         toggle_settings = { "<leader>a0" },
                                         toggle_message_role = { "<leader>a1" },
                                         toggle_system_role_open = { "<leader>a2" },
@@ -38,8 +38,8 @@ return {
                 "MunifTanjim/nui.nvim",
                 "nvim-lua/plenary.nvim",
                 "nvim-telescope/telescope.nvim"
-      },
-      keys = {
-              { "<leader>oa", "<CMD>ChatGPT<CR>", "ChatGPT: open" },
-      }
+        },
+        keys = {
+                { "<leader>oa", "<CMD>ChatGPT<CR>", "ChatGPT: open" },
+        }
 }

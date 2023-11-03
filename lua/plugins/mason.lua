@@ -27,6 +27,8 @@ return {
     mason.setup()
     lspconfig.setup()
 
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+
     vim.api.nvim_create_autocmd({ "BufWritePost" }, {
       callback = function()
         nvim_lint.try_lint()

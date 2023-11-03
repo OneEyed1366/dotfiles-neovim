@@ -22,6 +22,7 @@ if vim.g.vscode then
   }, {})
 else
   -- local neo_tree = require("plugins.neo-tree")
+  local formatter = require("plugins.formatter")
   local wtf = require("plugins.wtf")
   local which_key = require("plugins.whichkey")
   local mason = require("plugins.mason")
@@ -30,7 +31,7 @@ else
   local lspsaga = require("plugins.lspsaga")
   local scope = require("plugins.scope")
   local telescope = require("plugins.telescope")
-  -- local coc_telescope = require("plugins.telescope.coc_telescope")
+  local coc_telescope = require("plugins.telescope.coc_telescope")
   local docker_telescope = require("plugins.telescope.docker_telescope")
   local dap_telescope = require("plugins.telescope.dap_telescope")
   local git_telescope = require("plugins.telescope.git_advanced-search_telescope")
@@ -39,7 +40,7 @@ else
   local treesittier = require("plugins.treesettier")
   local autopairs = require("plugins.autopairs")
   local comments = require("plugins.comment")
-  -- local format_on_save = require("plugins.format-on-save")
+  local format_on_save = require("plugins.format-on-save")
   local indent = require("plugins.indent")
   local windows_sizes = require("plugins.window-size")
   local window_transparent = require("plugins.window-transparent")
@@ -53,22 +54,24 @@ else
   local git = require("plugins.git")
 
   require("lazy").setup({
-    git,
+    -- format_on_save,
+    -- formatter,
+    -- git,
     wtf,
     git_telescope,
     chat_gpt,
-    lspsaga,
+    -- lspsaga,
     usages,
-    context_vt,
+    -- context_vt,
     twilight,
     auto_session,
     which_key,
-    mason,
-    cmp,
-    lspconfig,
+    -- mason,
+    -- cmp,
+    -- lspconfig,
     telescope,
     dap_telescope,
-    -- coc_telescope,
+    coc_telescope,
     docker_telescope,
     colorschemes,
     signify,
