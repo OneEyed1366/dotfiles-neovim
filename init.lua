@@ -22,6 +22,7 @@ if vim.g.vscode then
   }, {})
 else
   -- local neo_tree = require("plugins.neo-tree")
+  local activate = require("plugins.activate")
   local formatter = require("plugins.formatter")
   local wtf = require("plugins.wtf")
   local which_key = require("plugins.whichkey")
@@ -57,6 +58,7 @@ else
     -- format_on_save,
     -- formatter,
     -- git,
+    activate,
     wtf,
     git_telescope,
     chat_gpt,

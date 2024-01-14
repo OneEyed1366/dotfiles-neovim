@@ -32,8 +32,8 @@ return {
         ["m"] = { "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>", "Save" },
         ["l"] = { "<CMD>call VSCodeNotify('workbench.action.showNextWindowTab')<CR>", "Next window" },
         ["h"] = { "<CMD>call VSCodeNotify('workbench.action.showPreviousWindowTab')<CR>", "Previous window" },
-        ["k"] = { "<CMD>call VSCodeNotify('projectManager.listProjectsNewWindow')<CR>", "Open project in new window" },
-        ["K"] = { "<CMD>call VSCodeNotify('workbench.action.newWindow')<CR>", "New VSCode instance" },
+        ["k"] = { "<CMD>call VSCodeNotify('projectManager.listProjects')<CR>", "Open project in new window" },
+        ["K"] = { "<CMD>call VSCodeNotify('projectManager.listProjectsNewWindow')<CR>", "New VSCode instance" },
         ["<Tab>"] = { "<CMD>call VSCodeNotify('workbench.action.nextEditor')<CR>", "Jump to next tab" },
         ["<S-Tab>"] = { "<CMD>call VSCodeNotify('workbench.action.previousEditor')<CR>", "Jump to previous tab" },
         o = {
