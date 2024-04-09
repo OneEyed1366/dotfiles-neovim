@@ -4,21 +4,21 @@ return {
         "jesseduffield/lazygit"
     },
     keys = {
-        { "<leader>§<leader>", "<CMD>FloatermToggle<CR>" },
-        { "<leader>o§", "<CMD>FloatermNew<CR>", "Open new terminal" },
+        { "<F12>",      "<CMD>FloatermToggle<CR>" },
+        { "<leader>oT", "<CMD>FloatermNew<CR>",         "Open new terminal" },
         { "<leader>og", "<CMD>FloatermNew lazygit<CR>", "Open LazyGIT" },
-        { "<leader>§b", "<CMD>FloatermKill<CR>", "Open LazyGIT" },
-        { "<leader>§l", "<CMD>FloatermNext<CR>", "Next terminal" },
-        { "<leader>§h", "<CMD>FloatermPrev<CR>", "Prev terminal" },
+        { "<leader>bt", "<CMD>FloatermKill<CR>",        "Open LazyGIT" },
+        { "<leader>tl", "<CMD>FloatermNext<CR>",        "Next terminal" },
+        { "<leader>th", "<CMD>FloatermPrev<CR>",        "Prev terminal" },
         -- T MODE
         -- <LEADER> hotfix
-        { mode = "t", "<leader><leader>", "<Space>" },
-        { mode = "t", "<leader>§<leader>", "<CMD>FloatermToggle<CR>" },
-        { mode = "t", "<leader>o§", "<CMD>FloatermNew<CR>", "Open new terminal" },
-        { mode = "t", "<leader>og", "<CMD>FloatermNew lazygit<CR>", "Open LazyGIT" },
-        { mode = "t", "<leader>§b", "<CMD>FloatermKill<CR>", "Open LazyGIT" },
-        { mode = "t", "<leader>§l", "<CMD>FloatermNext<CR>", "Next terminal" },
-        { mode = "t", "<leader>§h", "<CMD>FloatermPrev<CR>", "Prev terminal" },
+        { mode = "t",   "<leader>",                     "<Space>" },
+        { mode = "t",   "<F12>",                        "<CMD>FloatermToggle<CR>" },
+        { mode = "t",   "<leader>oT",                   "<CMD>FloatermNew<CR>",         "Open new terminal" },
+        { mode = "t",   "<leader>og",                   "<CMD>FloatermNew lazygit<CR>", "Open LazyGIT" },
+        { mode = "t",   "<leader>bt",                   "<CMD>FloatermKill<CR>",        "Open LazyGIT" },
+        { mode = "t",   "<leader>tl",                   "<CMD>FloatermNext<CR>",        "Next terminal" },
+        { mode = "t",   "<leader>th",                   "<CMD>FloatermPrev<CR>",        "Prev terminal" },
     },
     config = function()
         vim.g.floaterm_height = 0.95
