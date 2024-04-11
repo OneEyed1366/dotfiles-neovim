@@ -29,6 +29,7 @@ return {
                         }
                 end
 
+                -- TODO: npm i --global @vue/language-server
                 lspconfig.tsserver.setup {
                         init_options = {
                                 plugins = {
@@ -42,13 +43,6 @@ return {
                         filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
                 }
 
-                lspconfig.volar.setup {
-                        init_options = {
-                                vue = {
-                                        -- Set to false. TSServer sometimes fails with "hybridMode = true"
-                                        hybridMode = false
-                                }
-                        }
-                }
+                lspconfig.volar.setup {}
         end
 }
