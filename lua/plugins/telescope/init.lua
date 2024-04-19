@@ -151,7 +151,7 @@ return {
             },
             pickers = {
                 find_files = {
-                    theme = "dropdown"
+                    layout_strategy = "vertical"
                 },
                 diagnostics = {
                     theme = "dropdown"
@@ -162,11 +162,10 @@ return {
                     git_command = { "git", "log", "--oneline", "--decorate", "--all", "." } -- list result
                 },
                 ["ui-select"] = {
-                    require("telescope.themes").get_cursor {
-
-                    }
+                    require("telescope.themes").get_cursor {}
                 },
                 file_browser = {
+                    layout_strategy = "vertical",
                     cwd_to_path = false,
                     grouped = false,
                     files = true,
