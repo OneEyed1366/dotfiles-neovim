@@ -127,6 +127,8 @@ return {
     },
     config = function()
         local telescope = require("telescope")
+
+        local actions = require("telescope.actions")
         local fb_actions = require("telescope._extensions.file_browser.actions")
 
         telescope.setup({
@@ -156,7 +158,19 @@ return {
                 diagnostics = {
                     theme = "dropdown"
                 },
-            },
+                live_grep = {
+                    mappings = {
+                        ["i"] = {
+                            ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+                            ["<C-w>"] = actions.send_selected_to_qflist + actions.open_qflist,
+                        },
+                        ["n"] = {
+                            ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+                            ["<C-w>"] = actions.send_selected_to_qflist + actions.open_qflist,
+                        },
+                    },
+                },
+            }, 
             extensions = {
                 git_diffs = {
                     git_command = { "git", "log", "--oneline", "--decorate", "--all", "." } -- list result
