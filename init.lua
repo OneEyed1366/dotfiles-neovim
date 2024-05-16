@@ -31,6 +31,7 @@ else
   -- local usages = require("plugins.usages")
   -- local chat_gpt = require("plugins.chat-gpt")
   -- local format_on_save = require("plugins.format-on-save")
+  -- local lsp_timeout = require("plugins.lsp-timeout")
 
   local wtf = require("plugins.wtf")
   local which_key = require("plugins.whichkey")
@@ -39,7 +40,6 @@ else
   local lspconfig = require("plugins.lspconfig")
   local scope = require("plugins.scope")
   local git = require("plugins.git")
-  local lsp_timeout = require("plugins.lsp-timeout")
 
   local persisted = require("plugins.persisted")
 
@@ -75,9 +75,10 @@ else
     -- coc_telescope,
     -- dap,
     -- format_on_save,
+    -- Причина: после 2-4 включений-выключений LSP, глючат LSP сервисы и, возможно, сильно нагружается процессор
+    -- lsp_timeout
     noice,
     persisted,
-    lsp_timeout,
     git,
     wtf,
     git_telescope,
