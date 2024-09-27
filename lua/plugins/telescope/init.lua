@@ -8,6 +8,7 @@ return {
         'sindrets/diffview.nvim',
         'aaronhallaert/advanced-git-search.nvim',
         'Snikimonkd/telescope-git-conflicts.nvim',
+        'smartpde/telescope-recent-files'
     },
     keys = {
         -- { mode = "n", "/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy search buffer" },
@@ -34,29 +35,35 @@ return {
         {
             mode = "v",
             '<leader>f/',
-            ":Telescope grep_string<CR>",
+            "<CMD>Telescope grep_string<CR>",
             silent = true
         },
         {
             "<leader>/",
-            ":Telescope live_grep<CR>",
+            "<CMD>Telescope live_grep<CR>",
+            silent = true
+        },
+        -- {
+        --     "<leader>.",
+        --     "<CMD>Telescope file_browser path=%<CMD>p<CMD>h select_buffer=true<CR>",
+        --     silent = true,
+        --     noremap = true
+        -- },
+        -- Выключено т.к. используется oil.nvim
+        -- {
+        --     "<leader>>",
+        --     "<CMD>Telescope file_browser<CR>",
+        --     silent = true,
+        --     noremap = true
+        -- },
+        {
+            "<leader>ff",
+            "<CMD>Telescope find_files<CR>",
             silent = true
         },
         {
-            "<leader>.",
-            "<CMD>Telescope file_browser path=%:p:h select_buffer=true<CR>",
-            silent = true,
-            noremap = true
-        },
-        {
-            "<leader>>",
-            "<CMD>Telescope file_browser<CR>",
-            silent = true,
-            noremap = true
-        },
-        {
-            "<leader>ff",
-            ":Telescope find_files<CR>",
+            "<leader>f,",
+            "<CMD>lua require('telescope').extensions.recent_files.pick()<CR>",
             silent = true
         },
         -- { mode = "n", "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
@@ -117,6 +124,7 @@ return {
             desc =
             "Git stashed files for repo"
         },
+
         -- LSP
 
         { mode = "n", "<leader>c<leader>", "<cmd>Telescope diagnostics<cr>",           desc = "Buffer diagostics" },
@@ -170,8 +178,11 @@ return {
                         },
                     },
                 },
-            }, 
+            },
             extensions = {
+                recent_files = {
+                    only_cwd = true,
+                },
                 git_diffs = {
                     git_command = { "git", "log", "--oneline", "--decorate", "--all", "." } -- list result
                 },
@@ -240,6 +251,7 @@ return {
         })
 
 
+        telescope.load_extension("recent_files")
         telescope.load_extension("file_browser")
         telescope.load_extension("conflicts")
         telescope.load_extension("ui-select")

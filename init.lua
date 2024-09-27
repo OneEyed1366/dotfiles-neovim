@@ -31,6 +31,7 @@ else
   -- local usages = require("plugins.usages")
   -- local chat_gpt = require("plugins.chat-gpt")
   -- local format_on_save = require("plugins.format-on-save")
+  -- local persisted = require("plugins.persisted")
   -- local lsp_timeout = require("plugins.lsp-timeout")
 
   local wtf = require("plugins.wtf")
@@ -40,8 +41,6 @@ else
   local lspconfig = require("plugins.lspconfig")
   local scope = require("plugins.scope")
   local git = require("plugins.git")
-
-  local persisted = require("plugins.persisted")
 
   local telescope = require("plugins.telescope")
   local docker_telescope = require("plugins.telescope.docker_telescope")
@@ -56,6 +55,7 @@ else
   local comments = require("plugins.comment")
 
   local indent = require("plugins.indent")
+  local hop = require("plugins.hop")
 
   local windows_sizes = require("plugins.window-size")
   local window_transparent = require("plugins.window-transparent")
@@ -63,6 +63,8 @@ else
   local floaterm = require("plugins.terminal")
   local twilight = require("plugins.twilight")
   local noice = require("plugins.noice")
+  local oil_nvim = require("plugins.oil_nvim")
+  local flutter_tools = require("plugins.flutter_tools")
 
 
   require("lazy").setup({
@@ -76,9 +78,13 @@ else
     -- dap,
     -- format_on_save,
     -- Причина: после 2-4 включений-выключений LSP, глючат LSP сервисы и, возможно, сильно нагружается процессор
-    -- lsp_timeout
+    -- lsp_timeout,
+    -- Причина выключения: иногда Telescope FileBrowser не может корректно распарсить директории. SessionDelete не помогает
+    -- persisted,
+    hop,
+    flutter_tools,
+    oil_nvim,
     noice,
-    persisted,
     git,
     wtf,
     git_telescope,

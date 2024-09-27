@@ -44,7 +44,9 @@ return {
         },
         b = {
           name = "+buffer",
-          ["d"] = { "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>", "Close editor" }
+          ["d"] = { "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>", "Close editor" },
+          ["a"] = { "<CMD>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>", "Close other editors" },
+          ["A"] = { "<CMD>call VSCodeNotify('workbench.action.closeAllEditors')<CR>", "Close all editors" }
         },
         q = {
           name = "+quit",

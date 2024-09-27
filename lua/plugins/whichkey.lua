@@ -22,6 +22,14 @@ return {
       ["]]"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev error " },
       ["[["] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next error" },
     })
+    -- Motion
+    wk.register({
+      ["f"] = { "<CMD>HopWord<CR>", "Jump between words" },
+      ["F"] = { "<CMD>HopPattern<CR>", "Jump between patterns" },
+      ["t"] = { "<CMD>HopChar1<CR>", "Jump between selected char" },
+      ["T"] = { "<CMD>HopChar2<CR>", "Jump between selected 2 chars" },
+      ["<leader>t"] = { "<CMD>HopAnywhere<CR>", "Jump between anything in buffer" }
+    })
 
     wk.register({
       ["<leader>"] = {
