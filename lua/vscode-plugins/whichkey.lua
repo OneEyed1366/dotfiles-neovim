@@ -24,6 +24,10 @@ return {
     })
 
     wk.register({
+      ["t"] = { "<CMD>call VSCodeNotify('metaGo.gotoSmart')<CR>", "Jump between words" },
+    })
+
+    wk.register({
       ["<leader>"] = {
         ["r<cr>"] = { "<CMD>call VSCodeNotify('workbench.action.reloadWindow')<CR>", "Reload window" },
         ["/"] = { "<CMD>call VSCodeNotify('workbench.action.findInFiles')<CR>", "Search for string in files" },

@@ -41,6 +41,8 @@ else
   local lspconfig = require("plugins.lspconfig")
   local scope = require("plugins.scope")
   local git = require("plugins.git")
+  local none_ls = require("plugins.none-ls")
+  local none_ls_autoload = require("plugins.none-ls-autoload")
 
   local telescope = require("plugins.telescope")
   local docker_telescope = require("plugins.telescope.docker_telescope")
@@ -106,5 +108,7 @@ else
     window_transparent,
     floaterm,
     scope,
+    none_ls,
+    none_ls_autoload,
   }, {})
 end

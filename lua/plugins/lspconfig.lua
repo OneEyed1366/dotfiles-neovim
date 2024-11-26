@@ -33,7 +33,7 @@ return {
                 end
 
                 -- TODO: npm i --global @vue/language-server
-                lspconfig.ts_ls.setup {
+                lspconfig.tsserver.setup {
                         init_options = {
                                 plugins = {
                                         {

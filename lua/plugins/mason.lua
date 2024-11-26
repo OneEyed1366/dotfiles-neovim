@@ -23,7 +23,7 @@ return {
         "eslint",
         "pyright",
         "powershell_es",
-        "ts_ls",
+        "tsserver",
         "emmet_ls",
         "css_variables",
         "grammarly",
@@ -50,14 +50,11 @@ return {
     mason_nvim_lint.setup({
       ensure_installed = {
         "ansible-lint",
-        "htmlhint",
         "markdownlint",
-        "stylelint",
         "eslint_d",
         "hadolint",
         "jsonlint",
         "vale",
-        "prettier",
         "black",
       },
     })
