@@ -24,16 +24,25 @@ return {
     })
 
     wk.register({
+      ["f"] = { "<CMD>HopWord<CR>", "Jump between words" },
+      ["F"] = { "<CMD>HopPattern<CR>", "Jump between pattenrs" },
+      ["t"] = { "<CMD>HopChar1<CR>", "Jump between selected char" },
+      ["T"] = { "<CMD>HopChar2<CR>", "Jump between selected chars" },
+      ["<leader>f"] = { "<CMD>HopAnywhere<CR>", "Jump anywhere in current buffer" },
+    })
+
+    wk.register({
       ["<leader>"] = {
-        ["r<cr>"] = { "<CMD>call VSCodeNotify('workbench.action.reloadWindow')<CR>", "Reload window" },
+        ["R"] = { "<CMD>call VSCodeNotify('workbench.action.reloadWindow')<CR>", "Reload window" },
         ["/"] = { "<CMD>call VSCodeNotify('workbench.action.findInFiles')<CR>", "Search for string in files" },
         [","] = { "<CMD>call VSCodeNotify('workbench.action.showEditorsInActiveGroup')<cr>", "List open buffers" },
         ["<CR>"] = { "<CMD>call VSCodeNotify('workbench.action.showCommands')<CR>", "Commands" },
         ["m"] = { "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>", "Save" },
         ["l"] = { "<CMD>call VSCodeNotify('workbench.action.showNextWindowTab')<CR>", "Next window" },
         ["h"] = { "<CMD>call VSCodeNotify('workbench.action.showPreviousWindowTab')<CR>", "Previous window" },
-        ["k"] = { "<CMD>call VSCodeNotify('projectManager.listProjectsNewWindow')<CR>", "Open project in new window" },
-        ["K"] = { "<CMD>call VSCodeNotify('workbench.action.newWindow')<CR>", "New VSCode instance" },
+        ["n"] = { "<CMD>call VSCodeNotify('workbench.action.newWindow')<CR>", "New VSCode instance" },
+        ["k"] = { "<CMD>call VSCodeNotify('projectManager.listProjects')<CR>", "Open project in new window" },
+        ["K"] = { "<CMD>call VSCodeNotify('projectManager.listProjectsNewWindow')<CR>", "Open project in new window" },
         ["<Tab>"] = { "<CMD>call VSCodeNotify('workbench.action.nextEditor')<CR>", "Jump to next tab" },
         ["<S-Tab>"] = { "<CMD>call VSCodeNotify('workbench.action.previousEditor')<CR>", "Jump to previous tab" },
         o = {
@@ -44,7 +53,8 @@ return {
         },
         b = {
           name = "+buffer",
-          ["d"] = { "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>", "Close editor" }
+          ["d"] = { "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>", "Close editor" },
+          ["a"] = { "<CMD>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>", "Close other editors" },
         },
         q = {
           name = "+quit",
