@@ -33,7 +33,8 @@ return {
 
     wk.register({
       ["<leader>"] = {
-        ["R"] = { "<CMD>call VSCodeNotify('workbench.action.reloadWindow')<CR>", "Reload window" },
+        ["<leader>"] = { "<CMD>call VSCodeNotify('workbench.action.reloadWindow')<CR>", "Reload window" },
+        ["r"] = { "<CMD>call VSCodeNotify('vscode-neovim.restart')<CR>", "Reload neovim extension" },
         ["/"] = { "<CMD>call VSCodeNotify('workbench.action.findInFiles')<CR>", "Search for string in files" },
         [","] = { "<CMD>call VSCodeNotify('workbench.action.showEditorsInActiveGroup')<cr>", "List open buffers" },
         ["<CR>"] = { "<CMD>call VSCodeNotify('workbench.action.showCommands')<CR>", "Commands" },
