@@ -14,5 +14,6 @@ return {
                         "Code Go to References" },
                 ["."] = { "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>",
                         "Code Symbols" },
+                ["i"] = { "<CMD>call VSCodeNotify('workbench.action.showAllSymbols')<CR>", "Code workspace symbols" },
         },
 }

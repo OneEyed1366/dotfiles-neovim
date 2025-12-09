@@ -10,6 +10,7 @@ return {
     local terminal_keys = require("vscode-plugins.terminal")
     local files_keys = require("vscode-plugins.files")
     local sidebar_keys = require("vscode-plugins.sidebar")
+    local ai_keys = require("vscode-plugins.ai")
 
     wk.register({
       ["jk"] = { "<ESC>", "Exit insert mode", mode = "i", }
@@ -47,7 +48,7 @@ return {
         },
         q = {
           name = "+quit",
-          ["<Space>"] = { "<CMD>call VSCodeNotify('workbench.action.quit')<CR>", "Quit all" },
+          ["<Space>"] = { "<CMD>call VSCodeNotify('workbench.action.closeWindow')<CR>", "Quit all" },
         },
         w = {
           name = "+window",
@@ -63,6 +64,7 @@ return {
     })
 
 
+
     wk.register(code_keybindings)
     wk.register(comment_keys)
     wk.register(dap_keys)
@@ -70,5 +72,6 @@ return {
     wk.register(terminal_keys)
     wk.register(files_keys)
     wk.register(sidebar_keys)
+    wk.register(ai_keys)
   end
 }
