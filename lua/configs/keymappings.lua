@@ -57,6 +57,18 @@ return {
       { "D", "<CMD>bdelete!<CR>", name = "Force Delete" },
     }
   },
+  -- Code
+  {
+    "<leader>c",
+    name = "+code",
+    {
+      -- { mode = "n", "K",                 "<cmd>lua vim.lsp.buf.hover()<cr>",         desc = "LSP hover" },
+      -- { mode = "n", "]]",                "<cmd>lua vim.diagostic.go_next()<cr>",    desc = "LSP hover" },
+      -- { mode = "n", "[[",                "<cmd>lua vim.diagostic.go_prev()<cr>",    desc = "LSP hover" },
+      -- { mode = "n", "<leader>cr",         "<cmd>lua vim.lsp.buf.rename()<cr>",       desc = "LSP rename" },
+      -- { mode = "n", "<leader>c<CR>",     "<cmd>lua vim.lsp.buf.code_action()<cr>",   desc = "LSP code actions" },
+    }
+  },
   -- Open smth
   -- {
   --   "<leader>o",

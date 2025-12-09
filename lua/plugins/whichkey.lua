@@ -16,6 +16,12 @@ return {
       ["<Tab>"] = { "<CMD>bnext<CR>", "Jump to next buffer" },
       ["<S-Tab>"] = { "<CMD>bprevious<CR>", "Jump to prev buffer" },
     })
+    -- LSP
+    wk.register({
+      ["K"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
+      ["]]"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev error " },
+      ["[["] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next error" },
+    })
 
     wk.register({
       ["<leader>"] = {
@@ -47,6 +53,12 @@ return {
           ["j"] = { "<C-W>j", "Go to bottom window" },
           ["h"] = { "<C-W>h", "Go to left window" },
         },
+        c = {
+          name = "+code",
+          ["f"] = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
+          ["r"] = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+          ["<cr>"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code actions" },
+        }
       },
     })
   end
