@@ -13,8 +13,8 @@ return {
 
     wk.register({
       ["<ESC>"] = { "<CMD>noh<CR>", "Remove search highlight" },
-      ["<Tab>"] = { "<CMD>bnext<CR>", "Jump to next buffer" },
-      ["<S-Tab>"] = { "<CMD>bprevious<CR>", "Jump to prev buffer" },
+      ["<Tab>l"] = { "<CMD>bnext<CR>", "Jump to next buffer" },
+      ["<Tab>h"] = { "<CMD>bprevious<CR>", "Jump to prev buffer" },
     })
     -- LSP
     wk.register({
@@ -27,8 +27,8 @@ return {
       ["<leader>"] = {
         ["m"] = { "<CMD>w<CR>", "Save" },
         ["<Esc>"] = { "<C-\\><C-n>", "Exit insert in terminal", mode = "t" },
-        ["<Tab>"] = { "<CMD>tabnext<CR>", "Jump to next tab" },
-        ["<S-Tab>"] = { "<CMD>tabprev<CR>", "Jump to next buffer" },
+        ["<Tab>l"] = { "<CMD>tabnext<CR>", "Jump to next tab" },
+        ["<Tab>h"] = { "<CMD>tabprev<CR>", "Jump to next buffer" },
         o = {
           ["t"] = { "<CMD>tabnew<CR>", "Open new tab" }
         },
