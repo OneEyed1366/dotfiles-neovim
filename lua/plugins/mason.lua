@@ -14,37 +14,36 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
     local mason_nvim_dap = require("mason-nvim-dap")
     local mason_nvim_lint = require("mason-nvim-lint")
-    local mason_nvim_formatter = require("mason")
 
     mason.setup()
 
     mason_lspconfig.setup({
       ensure_installed = {
-        "lua_ls",
-        "eslint",
-        "pyright",
-        "powershell_es",
-        "tsserver",
-        "emmet_ls",
-        "css_variables",
-        "grammarly",
-        "cssls",
-        "tailwindcss",
-        "marksman",
-        "ansiblels",
-        "prismals",
-        "yamlls",
-        "astro",
-        "volar",
-        "svelte",
-        "graphql",
-        "stylelint_lsp",
-        "html",
-        "jsonls",
-        "angularls",
-        "dockerls",
-        "cssmodules_ls",
-        "diagnosticls",
+        -- "lua_ls",
+        -- "eslint",
+        -- "pyright",
+        -- "powershell_es",
+        -- "tsserver",
+        -- "emmet_ls",
+        -- "css_variables",
+        -- "grammarly",
+        -- "cssls",
+        -- "tailwindcss",
+        -- "marksman",
+        -- "ansiblels",
+        -- "prismals",
+        -- "yamlls",
+        -- "astro",
+        -- "volar",
+        -- "svelte",
+        -- "graphql",
+        -- "stylelint_lsp",
+        -- "html",
+        -- "jsonls",
+        -- "angularls",
+        -- "dockerls",
+        -- "cssmodules_ls",
+        -- "diagnosticls",
       },
     })
 
