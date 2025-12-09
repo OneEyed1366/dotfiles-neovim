@@ -151,9 +151,9 @@ return {
                 {
                         mode = "n", "<leader>c,", '<CMD>Telescope coc references_used<CR>', silent = true },
                 {
-                        mode = "n", "<leader>c.", '<CMD>Telescope coc document_symbols<CR>', silent = true },
-                {
-                        mode = "n", "<leader>c>", '<CMD>Telescope coc workspace_symbols<CR>', silent = true },
+                        mode = "n", "<leader>c.", '<CMD>Telescope coc workspace_symbols<CR>', silent = true },
+                -- {
+                --         mode = "n", "<leader>c>", '<CMD>Telescope coc workspace_symbols<CR>', silent = true },
                 {
                         mode = "n",
                         "c<cr>",
