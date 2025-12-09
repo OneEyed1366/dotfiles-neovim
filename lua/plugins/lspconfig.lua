@@ -3,7 +3,7 @@ return {
         dependencies = {
                 "williamboman/mason.nvim",
                 "williamboman/mason-lspconfig.nvim",
-                "hrsh7th/nvim-cmp", 
+                "hrsh7th/nvim-cmp",
         },
         config = function()
                 local mason = require('mason')
@@ -11,7 +11,6 @@ return {
                 local mason_lspconfig = require('mason-lspconfig')
                 local capabilities = vim.lsp.protocol.make_client_capabilities()
                 local servers = mason_lspconfig.get_installed_servers()
-
 
                 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
