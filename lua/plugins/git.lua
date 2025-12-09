@@ -1,7 +1,14 @@
 return {
         "lewis6991/gitsigns.nvim",
+        dependencies = {
+                "f-person/git-blame.nvim"
+        },
         config = function ()
                 require("gitsigns").setup()
+                require("gitblame").setup {
+                        enabled = true,
+                        gitblame_display_virtual_text = 1
+                }
         end,
         event = "LspAttach",
         keys = {
