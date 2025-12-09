@@ -12,10 +12,11 @@ return {
         end,
         event = "LspAttach",
         keys = {
-                { "]g", "<CMD>Gitsigns next_hunk<CR>", "Git: Next change" },
-                { "[g", "<CMD>Gitsigns prev_hunk<CR>", "Git: Prev change" },
-                { "<leader>gk", "<CMD>Gitsigns preview_hunk<CR>", "Git: Preview hunk"},
-                { "<leader>gm", "<CMD>Gitsigns stage_hunk<CR>", "Git: Stage hunk"},
-                { "<leader>gu", "<CMD>Gitsigns undo_stage_hunk<CR>", "Git: Unstage hunk"}
+                { "]g", "<CMD>Gitsigns next_hunk<CR>", "Next change" },
+                { "[g", "<CMD>Gitsigns prev_hunk<CR>", "Prev change" },
+                { "<leader>gk", "<CMD>Gitsigns preview_hunk<CR>", "Preview hunk" },
+                { "<leader>gm", "<CMD>Gitsigns stage_hunk<CR>", "Stage hunk" },
+                { "<leader>gx", "<CMD>Gitsigns undo_stage_hunk<CR>", "Unstage hunk" },
+                { "<leader>gu", "<CMD>Gitsigns reset_hunk<CR>", "Reset hunk" }
         }
 }
