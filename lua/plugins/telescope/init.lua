@@ -112,17 +112,13 @@ return {
             "Git stashed files for repo"
         },
         -- LSP
-        -- {
-        --     mode = "n",
-        --     "<leader>c<leader>",
-        --     "<cmd>Telescope diagnostics<cr>",
-        --     desc =
-        --     "LSP buffer diagostics"
-        -- },
-        -- { mode = "n", "<leader>c.", "<cmd>Telescope lsp_document_symbols<cr>", desc = "LSP buffer symbols" },
-        -- { mode = "n", "<leader>c>", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP repo symbols" },
-        -- { mode = "n", "<leader>c,", "<cmd>Telescope lsp_references<cr>", desc = "LSP references" },
-        -- { mode = "n", "<leader>ca", "<cmd>Telescope lsp_definitions<cr>", desc = "LSP go to definition" },
+        { mode = "n", "K",                 "<cmd>lua vim.lsp.buf.hover()<cr>",         desc = "LSP hover" },
+        { mode = "n", "<leader>c<leader>", "<cmd>Telescope diagnostics<cr>",           desc = "LSP buffer diagostics" },
+        { mode = "n", "<leader>c.",        "<cmd>Telescope lsp_document_symbols<cr>",  desc = "LSP buffer symbols" },
+        { mode = "n", "<leader>c>",        "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP repo symbols" },
+        { mode = "n", "<leader>c,",        "<cmd>Telescope lsp_references<cr>",        desc = "LSP references" },
+        { mode = "n", "<leader>ca",        "<cmd>Telescope lsp_definitions<cr>",       desc = "LSP go to definition" },
+        { mode = "n", "<leader>c<CR>",     "<cmd>lua vim.lsp.buf.code_action()<cr>",   desc = "LSP code actions" },
     },
     config = function()
         local telescope = require("telescope")
@@ -216,6 +212,7 @@ return {
 
 
         telescope.load_extension("file_browser")
+        -- telescope.load_extension("persisted")
         -- telescope_cc(telescope)
     end
 }
