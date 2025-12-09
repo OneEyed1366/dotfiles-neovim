@@ -3,9 +3,11 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-file-browser.nvim',
+        'nvim-telescope/telescope-ui-select.nvim',
         'paopaol/telescope-git-diffs.nvim',
         'sindrets/diffview.nvim',
-        'aaronhallaert/advanced-git-search.nvim'
+        'aaronhallaert/advanced-git-search.nvim',
+        'Snikimonkd/telescope-git-conflicts.nvim',
     },
     keys = {
         -- { mode = "n", "/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy search buffer" },
@@ -74,25 +76,29 @@ return {
             mode = "n",
             "<leader>gf",
             "<cmd>Telescope git_files<cr>",
-            desc = "Git list"
+            desc = "Git files"
         },
         {
             mode = "n",
             "<leader>g.",
-            "<cmd>Telescope git_bcommits<cr>",
-            desc =
-            "Git commits for repo"
+            "<cmd>Telescope git_branches<cr>",
+            desc = "Git branches for repo"
         },
         {
             mode = "n",
-            "<leader>g>",
+            "<leader>gcc",
+            "<cmd>Telescope conflicts<cr>",
+            desc = "Git conflicts"
+        },
+        {
+            mode = "n",
+            "<leader>gcmm",
             "<cmd>Telescope git_commits<cr>",
-            desc =
-            "Git commits for repo"
+            desc = "Git commits for repo"
         },
         {
             mode = "n",
-            "<leader>g,",
+            "<leader>gcmd",
             "<cmd>Telescope git_diffs  diff_commits<cr>",
             desc =
             "Git diff commits for repo"
@@ -106,19 +112,18 @@ return {
         },
         {
             mode = "n",
-            "<leader>gg",
+            "<leader>gs",
             "<cmd>Telescope git_stash<cr>",
             desc =
             "Git stashed files for repo"
         },
         -- LSP
-        { mode = "n", "K",                 "<cmd>lua vim.lsp.buf.hover()<cr>",         desc = "LSP hover" },
-        { mode = "n", "<leader>c<leader>", "<cmd>Telescope diagnostics<cr>",           desc = "LSP buffer diagostics" },
-        { mode = "n", "<leader>c.",        "<cmd>Telescope lsp_document_symbols<cr>",  desc = "LSP buffer symbols" },
-        { mode = "n", "<leader>c>",        "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP repo symbols" },
-        { mode = "n", "<leader>c,",        "<cmd>Telescope lsp_references<cr>",        desc = "LSP references" },
-        { mode = "n", "<leader>ca",        "<cmd>Telescope lsp_definitions<cr>",       desc = "LSP go to definition" },
-        { mode = "n", "<leader>c<CR>",     "<cmd>lua vim.lsp.buf.code_action()<cr>",   desc = "LSP code actions" },
+
+        { mode = "n", "<leader>c<leader>", "<cmd>Telescope diagnostics<cr>",           desc = "Buffer diagostics" },
+        { mode = "n", "<leader>c.",        "<cmd>Telescope lsp_document_symbols<cr>",  desc = "Buffer symbols" },
+        { mode = "n", "<leader>c>",        "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "Repo symbols" },
+        { mode = "n", "<leader>c,",        "<cmd>Telescope lsp_references<cr>",        desc = "References" },
+        { mode = "n", "<leader>ca",        "<cmd>Telescope lsp_definitions<cr>",       desc = "Go to definition" },
     },
     config = function()
         local telescope = require("telescope")
@@ -148,8 +153,19 @@ return {
                 find_files = {
                     theme = "dropdown"
                 },
+                diagnostics = {
+                    theme = "dropdown"
+                },
             },
             extensions = {
+                git_diffs = {
+                    git_command = { "git", "log", "--oneline", "--decorate", "--all", "." } -- list result
+                },
+                ["ui-select"] = {
+                    require("telescope.themes").get_cursor {
+
+                    }
+                },
                 file_browser = {
                     cwd_to_path = false,
                     grouped = false,
@@ -212,7 +228,8 @@ return {
 
 
         telescope.load_extension("file_browser")
-        -- telescope.load_extension("persisted")
+        telescope.load_extension("conflicts")
+        telescope.load_extension("ui-select")
         -- telescope_cc(telescope)
     end
 }
