@@ -4,7 +4,7 @@ return {
         "jesseduffield/lazygit"
     },
     keys = {
-        { "<F12>",      "<CMD>FloatermToggle<CR>" },
+        { "<F60>",      "<CMD>FloatermToggle<CR>" },
         { "<leader>oT", "<CMD>FloatermNew<CR>",         "Open new terminal" },
         { "<leader>og", "<CMD>FloatermNew lazygit<CR>", "Open LazyGIT" },
         { "<leader>bt", "<CMD>FloatermKill<CR>",        "Open LazyGIT" },
@@ -13,7 +13,7 @@ return {
         -- T MODE
         -- <LEADER> hotfix
         { mode = "t",   "<leader>",                     "<Space>" },
-        { mode = "t",   "<F12>",                        "<CMD>FloatermToggle<CR>" },
+        { mode = "t",   "<F60>",                        "<CMD>FloatermToggle<CR>" },
         { mode = "t",   "<leader>oT",                   "<CMD>FloatermNew<CR>",         "Open new terminal" },
         { mode = "t",   "<leader>og",                   "<CMD>FloatermNew lazygit<CR>", "Open LazyGIT" },
         { mode = "t",   "<leader>bt",                   "<CMD>FloatermKill<CR>",        "Open LazyGIT" },
