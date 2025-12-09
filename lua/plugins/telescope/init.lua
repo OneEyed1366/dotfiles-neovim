@@ -8,6 +8,7 @@ return {
         'sindrets/diffview.nvim',
         'aaronhallaert/advanced-git-search.nvim',
         'Snikimonkd/telescope-git-conflicts.nvim',
+        'smartpde/telescope-recent-files',
     },
     keys = {
         -- { mode = "n", "/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy search buffer" },
@@ -42,12 +43,12 @@ return {
             ":Telescope live_grep<CR>",
             silent = true
         },
-        {
-            "<leader>.",
-            "<CMD>Telescope file_browser path=%:p:h select_buffer=true<CR>",
-            silent = true,
-            noremap = true
-        },
+        -- {
+        --     "<leader>.",
+        --     "<CMD>Telescope file_browser path=%:p:h select_buffer=true<CR>",
+        --     silent = true,
+        --     noremap = true
+        -- },
         {
             "<leader>>",
             "<CMD>Telescope file_browser<CR>",
@@ -59,7 +60,8 @@ return {
             ":Telescope find_files<CR>",
             silent = true
         },
-        -- { mode = "n", "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+        { mode = "n", "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+        { mode = "n", "<leader>f,", "<CMD>lua require('telescope').extensions.recent_files.pick()<CR>", desc = "Recent files" },
         -- { mode = "n", "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Find in files" },
         {
             mode = "n",
@@ -170,7 +172,7 @@ return {
                         },
                     },
                 },
-            }, 
+            },
             extensions = {
                 git_diffs = {
                     git_command = { "git", "log", "--oneline", "--decorate", "--all", "." } -- list result
@@ -236,6 +238,9 @@ return {
                         },
                     },
                 },
+                recent_files = {
+                    only_cwd = true,
+                },
             },
         })
 
@@ -243,6 +248,7 @@ return {
         telescope.load_extension("file_browser")
         telescope.load_extension("conflicts")
         telescope.load_extension("ui-select")
+        telescope.load_extension("recent_files")
         -- telescope_cc(telescope)
     end
 }

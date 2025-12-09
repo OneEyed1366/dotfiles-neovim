@@ -8,7 +8,10 @@ return {
     [","] = { "<CMD>call VSCodeNotify('git.merge')<CR>", "Git merge into current branch" },
     ["m"] = { "<CMD>call VSCodeNotify('git.stage)<CR>", "Git stage stanges" },
     ["u"] = { "<CMD>call VSCodeNotify('git.unstage')<CR>", "Git Undo" },
-    ["i"] = { "<CMD>call VSCodeNotify('git.viewLineHistory')<CR>",
-      "Git Diff under the cursor" },
+    ["i"] = { "<CMD>call VSCodeNotify('git.viewChanges')<CR>", "Git show unstaged changes" },
+    ["p"] = { "<CMD>call VSCodeNotify('git.pull')<CR>", "Git pull" },
+    ["<S-p>"] = { "<CMD>call VSCodeNotify('git.push')<CR>", "Git push" },
+    ["r"] = { "<CMD>call VSCodeNotify('git.renameBranch')<CR>", "Git rename branch" },
+    ["d"] = { "<CMD>call VSCodeNotify('git.deleteBranch')<CR>", "Git delete branch" },
   },
 }
