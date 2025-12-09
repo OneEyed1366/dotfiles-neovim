@@ -42,7 +42,13 @@ return {
                         filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
                 }
 
-                -- No need to set `hybridMode` to `true` as it's the default value
-                lspconfig.volar.setup {}
+                lspconfig.volar.setup {
+                        init_options = {
+                                vue = {
+                                        -- Set to false. TSServer sometimes fails with "hybridMode = true"
+                                        hybridMode = false
+                                }
+                        }
+                }
         end
 }
