@@ -1,0 +1,7 @@
+# Font settings (synced with VSCode)
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
+font-style = regular
+
+# Use Option as Meta key for proper Alt keybindings
+macos-option-as-alt = true

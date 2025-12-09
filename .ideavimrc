@@ -1,0 +1,251 @@
+" .ideavimrc - Migrated from VSCode Neovim config
+" https://jb.gg/h38q75
+
+" ============================================================================
+" IdeaVim Plugins
+" ============================================================================
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+
+" ============================================================================
+" Settings
+" ============================================================================
+set scrolloff=4
+set number
+set relativenumber
+set incsearch
+set ignorecase
+set smartcase
+set clipboard+=unnamed
+set clipboard+=ideaput
+set timeoutlen=400
+
+let mapleader=" "
+let maplocalleader=" "
+
+" ============================================================================
+" Basic Mappings
+" ============================================================================
+" Exit insert mode
+imap jk <Esc>
+
+" Remove search highlight
+nnoremap <Esc> :nohlsearch<CR>
+
+" Save file
+nnoremap <leader>m :action SaveAll<CR>
+
+" Buffer/Tab navigation
+nnoremap <Tab> :action NextTab<CR>
+nnoremap <S-Tab> :action PreviousTab<CR>
+
+" Reload window/neovim
+nnoremap <leader><leader> :action InvalidateCaches<CR>
+nnoremap <leader>r :source ~/.ideavimrc<CR>
+
+" Search in files
+nnoremap <leader>/ :action FindInPath<CR>
+
+" List open buffers
+nnoremap <leader>, :action Switcher<CR>
+
+" Show commands
+nnoremap <leader><CR> :action GotoAction<CR>
+
+" Window navigation
+nnoremap <leader>l :action NextTab<CR>
+nnoremap <leader>h :action PreviousTab<CR>
+nnoremap <leader><Tab> :action NextTab<CR>
+nnoremap <leader><S-Tab> :action PreviousTab<CR>
+
+" New window
+nnoremap <leader>n :action NewWindow<CR>
+
+" Open project
+nnoremap <leader>k :action ManageRecentProjects<CR>
+nnoremap <leader>K :action OpenProjectWindows<CR>
+
+" ============================================================================
+" Tab Management
+" ============================================================================
+" Open new tab
+nnoremap <leader>ot :action NewElement<CR>
+
+" Close tab
+nnoremap <leader>td :action CloseContent<CR>
+
+" ============================================================================
+" Buffer Management
+" ============================================================================
+nnoremap <leader>bd :action CloseContent<CR>
+nnoremap <leader>ba :action CloseAllEditorsButActive<CR>
+
+" ============================================================================
+" Quit
+" ============================================================================
+nnoremap <leader>q<Space> :action CloseProject<CR>
+
+" ============================================================================
+" Window Management
+" ============================================================================
+" Close window
+nnoremap <leader>wd :action CloseAllEditors<CR>
+
+" Split windows
+nnoremap <leader>w\ :action SplitVertically<CR>
+nnoremap <leader>w- :action SplitHorizontally<CR>
+
+" Navigate between windows
+nnoremap <leader>wk :action PrevSplitter<CR>
+nnoremap <leader>wl :action NextSplitter<CR>
+nnoremap <leader>wj :action NextSplitter<CR>
+nnoremap <leader>wh :action PrevSplitter<CR>
+
+" ============================================================================
+" Motion Mappings (Hop replacement with EasyMotion)
+" ============================================================================
+" Jump between words (like HopWord)
+nmap f <Plug>(easymotion-bd-w)
+
+" Jump to character (like HopChar1)
+nmap t <Plug>(easymotion-bd-f)
+
+" Jump to 2 characters (like HopChar2)
+nmap T <Plug>(easymotion-bd-f2)
+
+" Jump anywhere (like HopAnywhere)
+nmap <leader>f <Plug>(easymotion-jumptoanywhere)
+
+" Search pattern (like HopPattern)
+nmap F <Plug>(easymotion-bd-fn)
+
+" ============================================================================
+" Code Actions & LSP
+" ============================================================================
+" Next/Previous error
+nnoremap ]] :action GotoNextError<CR>
+nnoremap [[ :action GotoPreviousError<CR>
+
+" Buffer diagnostics
+nnoremap <leader>c<leader> :action ActivateProblemsViewToolWindow<CR>
+
+" Code actions
+nnoremap <leader>c<CR> :action ShowIntentionActions<CR>
+
+" Reveal definition
+nnoremap <leader>ca :action GotoDeclaration<CR>
+
+" Rename
+nnoremap <leader>cr :action RenameElement<CR>
+
+" Go to references
+nnoremap <leader>c, :action FindUsages<CR>
+
+" Symbols in file
+nnoremap <leader>c. :action FileStructurePopup<CR>
+
+" Workspace symbols
+nnoremap <leader>ci :action GotoSymbol<CR>
+
+" ============================================================================
+" Comments
+" ============================================================================
+nnoremap gcc :action CommentByLineComment<CR>
+vnoremap gc :action CommentByLineComment<CR>
+
+" ============================================================================
+" Debug (DAP)
+" ============================================================================
+" Toggle breakpoint
+nnoremap <leader>tj :action ToggleLineBreakpoint<CR>
+
+" Next breakpoint
+nnoremap <leader>tl :action GotoNextError<CR>
+
+" Previous breakpoint
+nnoremap <leader>th :action GotoPreviousError<CR>
+
+" ============================================================================
+" Git
+" ============================================================================
+" Next/Previous chunk
+nnoremap ]g :action VcsShowNextChangeMarker<CR>
+nnoremap [g :action VcsShowPrevChangeMarker<CR>
+
+" File history
+nnoremap <leader>g<leader> :action Vcs.ShowTabbedFileHistory<CR>
+
+" Search in commits
+nnoremap <leader>g/ :action Vcs.Show.Log<CR>
+
+" Branches
+nnoremap <leader>g. :action Git.Branches<CR>
+
+" Merge
+nnoremap <leader>g, :action Git.Merge<CR>
+
+" Stage changes
+nnoremap <leader>gm :action ChangesView.AddUnversioned<CR>
+
+" Unstage
+nnoremap <leader>gu :action Vcs.RollbackChangedLines<CR>
+
+" Show unstaged changes
+nnoremap <leader>gi :action Compare.SameVersion<CR>
+
+" Pull
+nnoremap <leader>gp :action Git.Pull<CR>
+
+" Push
+nnoremap <leader>gP :action Git.Push<CR>
+
+" Rename branch
+nnoremap <leader>gr :action Git.RenameBranch<CR>
+
+" Delete branch
+nnoremap <leader>gd :action Git.DeleteBranch<CR>
+
+" ============================================================================
+" Terminal
+" ============================================================================
+" Toggle terminal
+nnoremap <leader>§<leader> :action ActivateTerminalToolWindow<CR>
+
+" New terminal
+nnoremap <leader>o§ :action Terminal.OpenInTerminal<CR>
+
+" Kill terminal
+nnoremap <leader>§b :action Terminal.StopProcess<CR>
+
+" Next/Previous terminal
+nnoremap <leader>§l :action NextTab<CR>
+nnoremap <leader>§h :action PreviousTab<CR>
+
+" ============================================================================
+" Files
+" ============================================================================
+" Find files
+nnoremap <leader>ff :action GotoFile<CR>
+
+" ============================================================================
+" Sidebar
+" ============================================================================
+" Toggle sidebar
+nnoremap <leader>. :action ActivateProjectToolWindow<CR>
+
+" File explorer
+nnoremap <leader>1 :action ActivateProjectToolWindow<CR>
+
+" Git sidebar
+nnoremap <leader>2 :action ActivateVersionControlToolWindow<CR>
+
+" ============================================================================
+" AI
+" ============================================================================
+" Toggle AI chat
+nnoremap <leader>a. :action ActivateAIAssistantToolWindow<CR>
+
+" AI inline prompt
+nnoremap <leader>ak :action ShowIntentionActions<CR>

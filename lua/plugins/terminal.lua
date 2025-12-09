@@ -1,27 +1,17 @@
+-- Terminal keybindings for Neovim
+-- Synced with VSCode keybindings.json
 return {
     "voldikss/vim-floaterm",
-    dependencies = {
-        "jesseduffield/lazygit"
-    },
-    keys = {
-        { "<F60>",      "<CMD>FloatermToggle<CR>" },
-        { "<leader>oT", "<CMD>FloatermNew<CR>",         "Open new terminal" },
-        { "<leader>og", "<CMD>FloatermNew lazygit<CR>", "Open LazyGIT" },
-        { "<leader>bt", "<CMD>FloatermKill<CR>",        "Open LazyGIT" },
-        { "<leader>tl", "<CMD>FloatermNext<CR>",        "Next terminal" },
-        { "<leader>th", "<CMD>FloatermPrev<CR>",        "Prev terminal" },
-        -- T MODE
-        -- <LEADER> hotfix
-        { mode = "t",   "<leader>",                     "<Space>" },
-        { mode = "t",   "<F60>",                        "<CMD>FloatermToggle<CR>" },
-        { mode = "t",   "<leader>oT",                   "<CMD>FloatermNew<CR>",         "Open new terminal" },
-        { mode = "t",   "<leader>og",                   "<CMD>FloatermNew lazygit<CR>", "Open LazyGIT" },
-        { mode = "t",   "<leader>bt",                   "<CMD>FloatermKill<CR>",        "Open LazyGIT" },
-        { mode = "t",   "<leader>tl",                   "<CMD>FloatermNext<CR>",        "Next terminal" },
-        { mode = "t",   "<leader>th",                   "<CMD>FloatermPrev<CR>",        "Prev terminal" },
-    },
+    lazy = false,  -- Load immediately so keybindings work
     config = function()
         vim.g.floaterm_height = 0.95
         vim.g.floaterm_width = 0.9
+
+        -- Alt+F12 toggle terminal (Ghostty sends <F60> for Alt+F12)
+        vim.keymap.set("n", "<F60>", "<CMD>FloatermToggle<CR>", { desc = "Toggle terminal" })
+        vim.keymap.set("t", "<F60>", "<CMD>FloatermToggle<CR>", { desc = "Toggle terminal" })
+
+        -- Terminal mode: Esc to exit
+        vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
     end
 }

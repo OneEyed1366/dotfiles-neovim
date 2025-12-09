@@ -23,19 +23,6 @@ if vim.g.vscode then
     hop,
   }, {})
 else
-  -- local neo_tree = require("plugins.neo-tree")
-  -- local formatter = require("plugins.formatter")
-  -- local lspsaga = require("plugins.lspsaga")
-  -- local coc_telescope = require("plugins.telescope.coc_telescope")
-  -- local dap = require("plugins.dap")
-  -- local auto_session = require("plugins.auto-session")
-  -- local context_vt = require("plugins.context_vt")
-  -- local usages = require("plugins.usages")
-  -- local chat_gpt = require("plugins.chat-gpt")
-  -- local format_on_save = require("plugins.format-on-save")
-  -- local persisted = require("plugins.persisted")
-  -- local lsp_timeout = require("plugins.lsp-timeout")
-
   local wtf = require("plugins.wtf")
   local which_key = require("plugins.whichkey")
   local mason = require("plugins.mason")
@@ -43,7 +30,6 @@ else
   local lspconfig = require("plugins.lspconfig")
   local scope = require("plugins.scope")
   local git = require("plugins.git")
-  local precognition = require("plugins.precognition")
   local hop = require("plugins.hop")
 
   local telescope = require("plugins.telescope")
@@ -69,23 +55,11 @@ else
   local oil_nvim = require("plugins.oil_nvim")
   local none_ls = require("plugins.none-ls")
   local none_ls_autoload = require("plugins.none-ls-autoload")
+  local store = require("plugins.store")
+  local avante = require("plugins.avante")
 
 
   require("lazy").setup({
-    -- formatter,
-    -- chat_gpt,
-    -- lspsaga,
-    -- usages,
-    -- context_vt,
-    -- auto_session,
-    -- coc_telescope,
-    -- dap,
-    -- format_on_save,
-    -- Причина: после 2-4 включений-выключений LSP, глючат LSP сервисы и, возможно, сильно нагружается процессор
-    -- lsp_timeout,
-    -- Причина выключения: иногда Telescope FileBrowser не может корректно распарсить директории. SessionDelete не помогает
-    -- persisted,
-    -- precognition,
     hop,
     oil_nvim,
     noice,
@@ -112,5 +86,7 @@ else
     scope,
     none_ls,
     none_ls_autoload,
+    store,
+    avante,
   }, {})
 end

@@ -41,11 +41,16 @@ vim.opt.showmode = false
 vim.opt.mouse = "a"
 vim.opt.wrap = false
 vim.opt.swapfile = false
-vim.opt.expandtab = true
+
+vim.opt.tabstop = 4      -- Display hard tabs as 4 spaces (recommended 8)
+vim.opt.shiftwidth = 2   -- Indent by 2 spaces (default: 4)
+vim.opt.softtabstop = 2  -- When using soft tabs, treat them as 2 spaces (default: 4)
+vim.opt.expandtab = true -- Use spaces instead of hard tabs
+
 vim.opt.conceallevel = 0
 vim.opt.foldenable = true
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append("unnamedplus")
 vim.cmd("set smartcase")
 
 if vim.fn.exists("+termguicolors") == 1 then
@@ -53,3 +58,4 @@ if vim.fn.exists("+termguicolors") == 1 then
 elseif vim.fn.exists("+guicolors") == 1 then
   vim.opt.guicolors = true
 end
+

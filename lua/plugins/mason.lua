@@ -37,12 +37,11 @@ return {
 
     mason_nvim_lint.setup({
       ensure_installed = {
-        "htmlhint",
         "markdownlint",
         "stylelint",
         "eslint_d",
         "jsonlint",
-        "prettier",
+        -- "prettier", -- this is a formatter, not a linter; use mason-null-ls or none-ls instead
       },
     })
 

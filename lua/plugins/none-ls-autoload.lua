@@ -6,5 +6,17 @@ return {
                 "nvimtools/none-ls.nvim",
                 "zeioth/none-ls-external-sources.nvim"
         },
-        opts = {},
+        opts = {
+                external_sources = {
+                        -- Linters not in Mason's registry
+                        builtins = {
+                                diagnostics = {
+                                        ruby = false,
+                                        ["clj-kondo"] = false,
+                                        inko = false,
+                                        janet = false,
+                                },
+                        },
+                },
+        },
 }
