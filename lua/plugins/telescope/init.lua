@@ -2,12 +2,10 @@ return {
     'nvim-telescope/telescope.nvim',
     dependencies = {
         'nvim-lua/plenary.nvim',
-        -- 'brookhong/telescope-pathogen.nvim',
         'nvim-telescope/telescope-file-browser.nvim',
-        --
         'paopaol/telescope-git-diffs.nvim',
-        'sindrets/diffview.nvim'
-        --
+        'sindrets/diffview.nvim',
+        'aaronhallaert/advanced-git-search.nvim'
     },
     keys = {
         -- { mode = "n", "/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy search buffer" },
@@ -76,8 +74,7 @@ return {
             mode = "n",
             "<leader>gf",
             "<cmd>Telescope git_files<cr>",
-            desc =
-            "Git list"
+            desc = "Git list"
         },
         {
             mode = "n",
